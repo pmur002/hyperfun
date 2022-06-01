@@ -1,2 +1,2 @@
 # hyperfun
-R package interface to HyperFun
+R package interface to [HyperFun](https://hyperfun.org/)
