@@ -18,17 +18,21 @@ void freeRessources (void)
 void hyperfun(Rcpp::StringVector args) 
 {
 
-    int argc = args.size();
-    // MAXIMUM of 21 arguments 
-    if (argc > 21)
+    // MAXIMUM of 22 arguments 
+    // First argument is program name
+    // Remaining arguments come from 'args'
+    int argc = args.size() + 1;
+    if (argc > 22)
         Rcpp::stop("Too many arguments.");
-    char *argv[21];
-    char array[21][100];
+    char array[22][100];
+    char *argv[22];
     int i;
-    for (i = 0; i < argc; i++) {
-        if (args[i].size() > 99)
+    strcpy(array[0], "hfp");
+    argv[0] = array[0];
+    for (i = 1; i < argc; i++) {
+        if (args[i - 1].size() > 99)
             Rcpp::stop("Argument %i too long", i + 1);
-        strcpy(array[i], args[i]);
+        strcpy(array[i], args[i - 1]);
         argv[i] = array[i];
     }
 
