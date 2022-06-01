@@ -1,0 +1,558 @@
+Common Good Public License
+Beta 1.0
+
+Preamble
+
+The licenses for most software are designed to limit an Original Work's
+distribution. The Common Good Public License seeks to do the opposite by
+securing an Original Work's wide spread distribution, modification, and use by
+as many people as possible.
+
+To protect your rights, we need to make restrictions that forbid anyone to deny
+you these rights or to ask you to surrender the rights. These restrictions
+translate to certain duties and responsibilities for you when you use the
+software, distribute copies of the software, or if you modify it.
+
+The License has been inspired by and we acknowledge the work done by the
+originators and supporters of the Universal Declaration of Human Rights, The
+Natural Step (TNS), the Free Software Foundation, and people everywhere who
+support and work for a sustainable and educated future.  It is our hope to bring
+together these three positive elements for the common good and help create a
+sustainable future of communication and technological development.
+
+
+Terms and Conditions
+
+A. Terms and Rights under a Grant of Copyright License. Provided that You meet
+   all the conditions set forth for each of the following Rights, the Licensor
+   hereby grants You a royalty-free, non-exclusive, non-sublicenseable,
+   world-wide, perpetual license to the following Rights:
+
+   0. Right to Own. You have the right to receive and own a copy of the Original
+      Work provided that You meet all the conditions defined in Terms and
+      Conditions, C. Conditions and Duties.
+
+   1. Right to Copy. You have the right to create copies of the Original Work
+      provided that You meet all the conditions defined in Terms and Conditions,
+      C. Conditions and Duties.
+
+   2. Right to Modify. You have the right to modify and create Derivative Works
+      from the Original Work provided that You meet all the conditions defined
+      in Terms and Conditions, C. Conditions and Duties.
+
+   3. Right to Publish. You have the right to publish and distribute copies of
+      the Original Work and Derivative Works in any media to the public provided
+      that You meet all the conditions defined in Terms and Conditions,
+      C. Conditions and Duties.
+
+   4. Right to Review. You have the right to review, display or perform the
+      Original Work publicly provided that You meet all the conditions defined
+      in Terms and Conditions, C. Conditions and Duties.
+
+B. Terms and Rights under a Grant of Patent License. Licensor hereby grants You
+   a world-wide, royalty-free, non-exclusive, perpetual, non-sublicenseable
+   license, under patent claims owned or controlled by the Licensor that are
+   embodied in the Original Work as furnished by the Licensor ("Licensed
+   Claims") to own, make, use, sell, offer for sale and review the Original
+   Works and / or Derivative Works provided that You meet all the conditions
+   defined in Terms and Conditions, C. Conditions and Duties.
+
+C. Conditions and Duties. The following Conditions and Duties are generally
+   listed and should be applied as required by each Right in section A. Terms
+   and Rights under a Grant of Copyright License. and as generally required in
+   section B. Terms and Rights under a Grant of Patent License.under Terms and
+   Conditions:
+
+   0.0. Duty to Share.
+
+   0.1. Any and all Derivative Works made from Original Works licensed under
+        this license must themselves be licensed under this license.
+
+   0.2. You can combine the whole or any part of the Original Works and / or
+        Derivative Works with Other Works licensed under different licenses so
+        long as the different licenses are compatible with this License, the
+        different licenses effectively grant no more and no less Rights than the
+        Rights granted in this License under section A. Terms and Rights under a
+        Grant of Copyright License without limitations on time or scope, and
+        most importantly satisfy the condition directly below this one, part
+        0.3. of this section 0.0. Duty to Share defined here in C. Conditions
+        and Duties. To combine the whole or any part of the Original Works and /
+        or Derivative Works with Other Works licensed under different licenses
+        those licenses must have a provision requiring the distribution of the
+        Source Data along with the Original Work and / or Derivative Work
+        licensed under these other licenses. If such additional licenses are
+        used on some parts of an Original Work and / or Derivative Work then any
+        part of an Original Work and / or Derivative Work licensed under this
+        license shall remain so and may not be licensed under any other license
+        except by the copyright holder for a given part.
+
+   0.3. You hereby agree to provide a usable copy of the Source Data of the
+        Original Work and / or Derivative Work along with each copy of the
+        Original Work that You distribute if the Original Work and / or
+        Derivative Work itself is not already Source Data. You reserve the right
+        to satisfy this obligation by placing a usable copy of the Source Data
+        in an information repository reasonably calculated to permit inexpensive
+        and convenient access by licensees for as long as You continue to
+        distribute the Original Work and / or Derivative Work, and by publishing
+        the address of that information repository in a notice immediately
+        following the copyright notice that applies to the Original Work and /
+        or Derivative Work.
+
+   0.4. You must cause any Derivative Work to carry prominent notices stating
+        that You made modifications and the date of any change.
+
+   0.5. You must cause the whole or any part of the Original Work and / or
+        Derivative Work that you distribute or publish to be licensed as a whole
+        at no charge to all third parties under the terms of this License.
+
+   0.6. You must conspicuously and appropriately publish on each copy an
+        appropriate copyright notice and disclaimer of warranty; keep intact all
+        the notices that refer to this License and to the absence of any
+        warranty; and give any other recipients of the Original Work and / or
+        Derivative Work a copy of this License along with any Original Works and
+        / or Derivative Works.
+
+   1.0. Duty to Environment. By your ownership, distribution, modification, and
+        review of this Original Work and / or Derivative Work:
+
+   1.1. You do not prevent the reduction of Nature's functions and diversity
+        being systematically subject to increasing concentrations of materials
+        and substances extracted from the earth.
+
+   1.2. You do not prevent the reduction of Nature's functions and diversity
+        being systematically subject to increasing concentrations of materials
+        and substances produced by society.
+
+   1.3. You do not prevent the reduction of Nature's functions and diversity
+        being systematically impoverished by physical displacement, over
+        harvesting, or other forms of ecosystem manipulation.
+
+   1.4. You do not prevent the reduction of Nature's functions and diversity
+        being systematically impoverished due to the unfair and inefficient use
+        of resources in order to meet human needs globally.
+
+   2.0 Duty to Humanity. By your ownership, distribution, modification, and
+       review You do not violate the UNIVERSAL DECLARATION OF HUMAN RIGHTS
+       adopted and proclaimed by the UN General Assembly Resolution 217 A
+       (http://www.un.org/Overview/rights.html), see Appendix [1] which is
+       hereby considered part of the Terms and Conditions of this License.
+
+D. External Deployment. The term "External Deployment" means the use or
+   distribution of the Original Work or Derivative Works in any way such that
+   the Original Work or Derivative Works may be used by anyone other than You,
+   whether the Original Work or Derivative Works are distributed to those
+   persons or made available as an application intended for use over a computer
+   network. As an express condition for the grants of license hereunder, You
+   agree that any External Deployment by You of a Derivative Work shall be
+   deemed a distribution and shall be licensed to all under the terms of this
+   License.
+
+E. Attribution Rights. You must retain, in the Source Code of any Derivative
+   Works that You create, all copyright, patent or trademark notices from the
+   Source Code of the Original Work, as well as any notices of licensing and any
+   descriptive text identified therein as an "Attribution Notice." You must
+   cause the Source Code for any Derivative Works that You create to carry a
+   prominent Attribution Notice reasonably calculated to inform recipients that
+   You have modified the Original Work.
+
+F. Exclusions From License Grant. Nothing in this License shall be deemed to
+   grant any rights to trademarks, copyrights, patents, trade secrets or any
+   other intellectual property of Licensor except as expressly stated herein. No
+   patent license is granted to make, use, sell or offer to sell embodiments of
+   any patent claims other than the Licensed Claims defined in section B.Terms
+   and Rights under a Grant of Patent License. No right is granted to the
+   trademarks of Licensor even if such marks are included in the Original
+   Work. Nothing in this License shall be interpreted to prohibit the Licensor
+   from licensing under different terms from this License any Original Work that
+   the Licensor otherwise would have a right to license.
+
+G. Forward Compatible License. CGPL.org may publish revised and/or new versions
+   of the CGPL from time to time. Such new versions will be similar in spirit to
+   the present version, but may differ in detail to address new problems or
+   concerns. Each version is given a distinguishing version number. If the
+   Program specifies a version number of this License which applies to it and
+   "any later version", you have the option of following the terms and
+   conditions either of that version or of any later version published by the
+   CGPL.org. If the Program does not specify a version number of this License,
+   you may choose any version ever published by CGPL.org.
+
+H. Acceptance and Termination. If You distribute copies of the Original Work or
+   a Derivative Work, You must make a reasonable effort under the circumstances
+   to obtain the express and volitional assent of recipients to the terms of
+   this License. Nothing else but this License (or another written agreement
+   between Licensor and You) grants You permission to create Derivative Works
+   based upon the Original Work or to exercise any of the rights granted in
+   sections A. Terms and Rights under a Grant of Copyright License and B. Terms
+   and Rights under a Grant of Patent License herein, and any attempt to do so
+   except under the terms of this License (or another written agreement between
+   Licensor and You) is expressly prohibited by U.S. copyright law, the
+   equivalent laws of other countries, and by international treaty. Therefore,
+   by exercising any of the rights granted to You in sections A and B herein,
+   You indicate Your acceptance of this License and all of its Terms and
+   Conditions. This License shall terminate immediately and you may no longer
+   exercise any of the rights granted to You by this License upon Your failure
+   to honor the provision in section C. Conditions and Duties herein.
+
+   You may not copy, modify, sublicense, or distribute the Program except as
+   expressly provided under this License. Any attempt otherwise to copy, modify,
+   sublicense or distribute the Program is void, and will automatically
+   terminate your rights under this License. However, parties who have received
+   copies, or rights, from You under this License will not have their licenses
+   terminated so long as such parties remain in full compliance.
+
+   You are not required to accept this License, since you have not signed
+   it. However, nothing else grants you permission to modify or distribute the
+   Program or its derivative works. These actions are prohibited by law if you
+   do not accept this License. Therefore, by modifying or distributing the
+   Program (or any work based on the Program), you indicate your acceptance of
+   this License to do so, and all its terms and conditions for copying,
+   distributing or modifying the Program or works based on it.
+
+I. Mutual Termination for Patent Action. This License shall terminate
+   automatically and You may no longer exercise any of the rights granted to You
+   by this License if You file a lawsuit in any court alleging that any CGPL
+   licensed Original Work infringes any patent claims that are essential to own,
+   use, copy, modify, publish, or reviewthat Original Work.
+
+   If, as a consequence of a court judgment or allegation of patent infringement
+   or for any other reason (not limited to patent issues), conditions are
+   imposed on you (whether by court order, agreement or otherwise) that
+   contradict the conditions of this License, they do not excuse you from the
+   conditions of this License. If you cannot distribute so as to satisfy
+   simultaneously your obligations under this License and any other pertinent
+   obligations, then as a consequence you may not distribute the Program at
+   all. For example, if a patent license would not permit royalty-free
+   redistribution of an Original Work by all those who receive copies directly
+   or indirectly through you, then the only way you could satisfy both it and
+   this License would be to refrain entirely from distribution of an Original
+   Work.
+
+   If any portion of this section is held invalid or unenforceable under any
+   particular circumstance, the balance of the section is intended to apply and
+   the section as a whole is intended to apply in other circumstances.
+
+   It is not the purpose of this section to induce you to infringe any patents
+   or other property right claims or to contest validity of any such claims;
+   this section has the sole purpose of protecting the integrity of the free
+   software distribution system, which is implemented by public license
+   practices. Many people have made generous contributions to the wide range of
+   software distributed through that system in reliance on consistent
+   application of that system; it is up to the author/donor to decide if he or
+   she is willing to distribute software through any other system and a licensee
+   cannot impose that choice.
+
+   This section is intended to make thoroughly clear what is believed to be a
+   consequence of the rest of this License.
+
+J. Jurisdiction, Venue and Governing Law. Any action or suit relating to this
+   License may be brought only in the courts of a jurisdiction wherein the
+   Licensor resides or in which Licensor conducts its primary business, and
+   under the laws of that jurisdiction excluding its conflict-of-law
+   provisions. The application of the United Nations Convention on Contracts for
+   the International Sale of Goods is expressly excluded. Any use of the
+   Original Work outside the scope of this License or after its termination
+   shall be subject to the requirements and penalties of the U.S. Copyright Act,
+   17 U.S.C. § 101 et seq., the equivalent laws of other countries, and
+   international treaty. This section shall survive the termination of this
+   License.
+
+K. Attorneys Fees. In any action to enforce the terms of this License or seeking
+   damages relating thereto, the prevailing party shall be entitled to recover
+   its costs and expenses, including, without limitation, reasonable attorneys'
+   fees and costs incurred in connection with such action, including any appeal
+   of such action. This section shall survive the termination of this License
+
+L. Warranty and Disclaimer of Warranty. Licensor warrants that the copyright in
+   and to the Original Work is owned by the Licensor or that the Original Work
+   is distributed by Licensor under a valid current license from the copyright
+   owner. Except as expressly stated in the immediately proceeding sentence, the
+   Original Work is provided under this License on an "AS IS" BASIS and WITHOUT
+   WARRANTY, either express or implied, including, without limitation, the
+   warranties of NON-INFRINGEMENT, MERCHANTABILITY or FITNESS FOR A PARTICULAR
+   PURPOSE. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL WORK IS WITH
+   YOU. This DISCLAIMER OF WARRANTY constitutes an essential part of this
+   License. No license to Original Work is granted here under except under this
+   disclaimer.
+
+   BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE
+   PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE
+   STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE
+   PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED,
+   INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+   FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
+   PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE,
+   YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+M. Limitation of Liability. Under no circumstances and under no legal theory,
+   whether in tort (including negligence), contract, or otherwise, shall the
+   Licensor be liable to any person for any direct, indirect, special,
+   incidental, or consequential damages of any character arising as a result of
+   this License or the use of the Original Work including, without limitation,
+   damages for loss of goodwill, work stoppage, computer failure or malfunction,
+   or any and all other commercial damages or losses. This limitation of
+   liability shall not apply to liability for death or personal injury resulting
+   from Licensor's negligence to the extent applicable law prohibits such
+   limitation. Some jurisdictions do not allow the exclusion or limitation of
+   incidental or consequential damages, so this exclusion and limitation may not
+   apply to You.
+
+   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL
+   ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE
+   THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+   GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE
+   OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR
+   DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR
+   A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH
+   HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+N. Miscellaneous. This License represents the complete agreement concerning the
+   subject matter hereof. If any provision of this License is held to be
+   unenforceable, such provision shall be reformed only to the extent necessary
+
+Appendix [1]
+Univeral Declaration of Human Rights and Conditions
+Adopted and proclaimed by General Assembly resolution 217 A (III) of 10 December
+1948 On December 10, 1948 the General Assembly of the United Nations adopted and
+proclaimed the Universal Declaration of Human Rights the full text of which
+appears in the following pages. Following this historic act the Assembly called
+upon all Member countries to publicize the text of the Declaration and "to cause
+it to be disseminated, displayed, read and expounded principally in schools and
+other educational institutions, without distinction based on the political
+status of countries or territories."
+
+PREAMBLE
+
+Whereas recognition of the inherent dignity and of the equal and inalienable
+rights of all members of the human family is the foundation of freedom, justice
+and peace in the world,
+
+Whereas disregard and contempt for human rights have resulted in barbarous acts
+which have outraged the conscience of mankind, and the advent of a world in
+which human beings shall enjoy freedom of speech and belief and freedom from
+fear and want has been proclaimed as the highest aspiration of the common
+people,
+
+Whereas it is essential, if man is not to be compelled to have recourse, as a
+last resort, to rebellion against tyranny and oppression, that human rights
+should be protected by the rule of law,
+
+Whereas it is essential to promote the development of friendly relations between
+nations,
+
+Whereas the peoples of the United Nations have in the Charter reaffirmed their
+faith in fundamental human rights, in the dignity and worth of the human person
+and in the equal rights of men and women and have determined to promote social
+progress and better standards of life in larger freedom,
+
+
+Whereas Member States have pledged themselves to achieve, in co-operation with
+the United Nations, the promotion of universal respect for and observance of
+human rights and fundamental freedoms, Whereas a common understanding of these
+rights and freedoms is of the greatest importance for the full realization of
+this pledge,
+
+Now, Therefore THE GENERAL ASSEMBLY proclaims THIS UNIVERSAL DECLARATION OF
+HUMAN RIGHTS as a common standard of achievement for all peoples and all
+nations, to the end that every individual and every organ of society, keeping
+this Declaration constantly in mind, shall strive by teaching and education to
+promote respect for these rights and freedoms and by progressive measures,
+national and international, to secure their universal and effective recognition
+and observance, both among the peoples of Member States themselves and among the
+peoples of territories under their jurisdiction.
+
+ARTICLE 1. All human beings are born free and equal inq dignity and rights. They
+           are endowed with reason and conscience and should act towards one
+           another in a spirit of brotherhood.
+
+ARTICLE 2. Everyone is entitled to all the rights and freedoms set forth in this
+           Declaration, without distinction of any kind, such as race, colour,
+           sex, language, religion, political or other opinion, national or
+           social origin, property, birth or other status. Furthermore, no
+           distinction shall be made on the basis of the political,
+           jurisdictional or international status of the country or territory to
+           which a person belongs, whether it be independent, trust,
+           non-self-governing or under any other limitation of sovereignty.
+
+ARTICLE 4. No one shall be held in slavery or servitude; slavery and the slave
+           trade shall be prohibited in all their forms.
+
+ARTICLE 5. No one shall be subjected to torture or to cruel, inhuman or
+           degrading treatment or punishment.
+
+ARTICLE 6. Everyone has the right to recognition everywhere as a person before
+           the law.
+
+ARTICLE 7. All are equal before the law and are entitled without any
+           discrimination to equal protection of the law. All are entitled to
+           equal protection against any discrimination in violation of this
+           Declaration and against any incitement to such discrimination.
+
+ARTICLE 8. Everyone has the right to an effective remedy by the competent
+           national tribunals for acts violating the fundamental rights granted
+           him by the constitution or by law.
+
+ARTICLE 9. No one shall be subjected to arbitrary arrest, detention or exile.
+
+ARTICLE 10. Everyone is entitled in full equality to a fair and public hearing
+            by an independent and impartial tribunal, in the determination of
+            his rights and obligations and of any criminal charge against him.
+
+ARTICLE 11. (1) Everyone charged with a penal offence has the right to be
+                presumed innocent until proved guilty according to law in a
+                public trial at which he has had all the guarantees necessary
+                for his defence.
+
+            (2) No one shall be held guilty of any penal offence on account of
+                any act or omission which did not constitute a penal offence,
+                under national or international law, at the time when it was
+                committed. Nor shall a heavier penalty be imposed than the one
+                that was applicable at the time the penal offence was committed.
+
+ARTICLE 12. No one shall be subjected to arbitrary interference with his
+            privacy, family, home or correspondence, nor to attacks upon his
+            honour and reputation. Everyone has the right to the protection of
+            the law against such interference or attacks.
+
+ARTICLE 13. (1) Everyone has the right to freedom of movement and residence
+                within the borders of each state.
+
+            (2) Everyone has the right to leave any country, including his own,
+                and to return to his country.
+
+ARTICLE 14. (1) Everyone has the right to seek and to enjoy in other countries
+                asylum from persecution.
+
+            (2) This right may not be invoked in the case of prosecutions
+                genuinely arising from non-political crimes or from acts
+                contrary to the purposes and principles of the United Nations.
+
+ARTICLE 15. (1) Everyone has the right to a nationality.
+
+            (2) No one shall be arbitrarily deprived of his nationality nor
+                denied the right to change his nationality.
+
+ARTICLE 16. (1) Men and women of full age, without any limitation due to race,
+                nationality or religion, have the right to marry and to found a
+                family. They are entitled to equal rights as to marriage, during
+                marriage and at its dissolution.
+
+            (2) Marriage shall be entered into only with the free and full
+                consent of the intending spouses.
+
+            (3) The family is the natural and fundamental group unit of society
+                and is entitled to protection by society and the State.
+
+ARTICLE 17. (1) Everyone has the right to own property alone as well as in
+                association with others.
+
+            (2) No one shall be arbitrarily deprived of his property.
+
+ARTICLE 18. Everyone has the right to freedom of thought, conscience and
+            religion; this right includes freedom to change his religion or
+            belief, and freedom, either alone or in community with others and in
+            public or private, to manifest his religion or belief in teaching,
+            practice, worship and observance.
+
+ARTICLE 19. Everyone has the right to freedom of opinion and expression; this
+            right includes freedom to hold opinions without interference and to
+            seek, receive and impart information and ideas through any media and
+            regardless of frontiers.
+
+ARTICLE 20. (1) Everyone has the right to freedom of peaceful assembly and
+                association.
+
+            (2) No one may be compelled to belong to an association.
+
+ARTICLE 21. (1) Everyone has the right to take part in the government of his
+                country, directly or through freely chosen representatives.
+
+            (2) Everyone has the right of equal access to public service in his
+                country.
+
+            (3) The will of the people shall be the basis of the authority of
+                government; this will shall be expressed in periodic and genuine
+                elections which shall be by universal and equal suffrage and
+                shall be held by secret vote or by equivalent free voting
+                procedures.
+
+ARTICLE 22. Everyone, as a member of society, has the right to social security
+            and is entitled to realization, through national effort and
+            international co-operation and in accordance with the organization
+            and resources of each State, of the economic, social and cultural
+            rights indispensable for his dignity and the free development of his
+            personality.
+
+ARTICLE 23. (1) Everyone has the right to work, to free choice of employment, to
+                just and favourable conditions of work and to protection against
+                unemployment.
+
+            (2) Everyone, without any discrimination, has the right to equal pay
+                for equal work.
+
+            (3) Everyone who works has the right to just and favourable
+                remuneration ensuring for himself and his family an existence
+                worthy of human dignity, and supplemented, if necessary, by
+                other means of social protection.
+
+            (4) Everyone has the right to form and to join trade unions for the
+                protection of his interests.
+
+ARTICLE 24. Everyone has the right to rest and leisure, including reasonable
+            limitation of working hours and periodic holidays with pay.
+
+ARTICLE 25. (1) Everyone has the right to a standard of living adequate for the
+                health and well-being of himself and of his family, including
+                food, clothing, housing and medical care and necessary social
+                services, and the right to security in the event of
+                unemployment, sickness, disability, widowhood, old age or other
+                lack of livelihood in circumstances beyond his control.
+
+            (2) Motherhood and childhood are entitled to special care and
+                assistance. All children, whether born in or out of wedlock,
+                shall enjoy the same social protection.
+
+ARTICLE 26. (1) Everyone has the right to education. Education shall be free, at
+                least in the elementary and fundamental stages. Elementary
+                education shall be compulsory. Technical and professional
+                education shall be made generally available and higher education
+                shall be equally accessible to all on the basis of merit.
+
+            (2) Education shall be directed to the full development of the human
+                personality and to the strengthening of respect for human rights
+                and fundamental freedoms. It shall promote understanding,
+                tolerance and friendship among all nations, racial or religious
+                groups, and shall further the activities of the United Nations
+                for the maintenance of peace.
+
+            (3) Parents have a prior right to choose the kind of education that
+                shall be given to their children.
+
+ARTICLE 27. (1) Everyone has the right freely to participate in the cultural
+                life of the community, to enjoy the arts and to share in
+                scientific advancement and its benefits.
+
+            (2) Everyone has the right to the protection of the moral and
+                material interests resulting from any scientific, literary or
+                artistic production of which he is the author.
+
+ARTICLE 28. Everyone is entitled to a social and international order in which
+            the rights and freedoms set forth in this Declaration can be fully
+            realized.
+
+ARTICLE 29. (1) Everyone has duties to the community in which alone the free and
+                full development of his personality is possible.
+
+            (2) In the exercise of his rights and freedoms, everyone shall be
+                subject only to such limitations as are determined by law solely
+                for the purpose of securing due recognition and respect for the
+                rights and freedoms of others and of meeting the just
+                requirements of morality, public order and the general welfare
+                in a democratic society.
+
+            (3) These rights and freedoms may in no case be exercised contrary
+                to the purposes and principles of the United Nations.
+
+ARTICLE 30. Nothing in this Declaration may be interpreted as implying for any
+            State, group or person any right to engage in any activity or to
+            perform any act aimed at the destruction of any of the rights and
+            freedoms set forth herein.

@@ -1,0 +1,50 @@
+Package: hyperfun
+Type: Package
+Title: Constructive Geometry in 3D
+Version: 0.1-0
+Authors@R: c(
+    person("Paul", "Murrell", , "paul@stat.auckland.ac.nz", 
+           role = c("cre", "aut"),
+           comment = c(ORCID = "0000-0002-3224-8858")),
+    person("Pierre-Alain", "Fayolle",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Benjamin", "Schmitt",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Oleg", "Fryazinov",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Denis", "Kravtsov",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Dmitry", "Popov",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Eric", "Fausett",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Shogo", "Onozuka",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Valery", "Adzhiev",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Alexander", "Pasko",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Ken", "Yoshikawa",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Anatoly", "Ossipov",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun"),
+    person("Yutaka", "Ohtake",
+           role = c("aut", "cph"),
+           comment = "Author of HyperFun")
+  )
+Description: R interface to the HyperFun system for generating 3D models.
+URL: https://github.com/pmur002/hyperfun, https://hyperfun.org/
+License: file LICENCE
+Imports: Rcpp (>= 0.11.5)
+LinkingTo: Rcpp

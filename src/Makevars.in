@@ -1,0 +1,15 @@
+# Default make file
+PKG_CPPFLAGS = -I. -Ihflibrary_lib -Ipolygon_engine_lib -Iinterpreter_lib -Icppinterpreter_lib -Ihfp
+
+# Include all C/C++ files in src/ and its subdirectories
+SOURCES = RcppExports.cpp @SUBDIR_SOURCES@ hyperfun.cpp 
+
+# Obtain the object files
+OBJECTS = $(addsuffix .o,$(basename $(SOURCES)))
+
+# Make the shared object
+all: $(SHLIB)
+
+# Provide recipe to remove all objects
+clean:
+	@rm -f $(OBJECTS)
