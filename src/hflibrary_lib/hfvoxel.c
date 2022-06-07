@@ -101,19 +101,16 @@ double Z_MAX;
 double X_STEP; 
 double Y_STEP; 
 double Z_STEP; 
-int NOT_FOUND;
 int NOT_EXIST;
 
  int fg1,fg2,fg3,fg4,fg5,fg6,fg7,fg8;
  long idx, idy, idz, idx1,idy1,idz1,num;
  double fglob,u,v,w,u1,v1,w1,xt,yt,zt,xx,yy,zz;
- double a = 0.48*0.48, b = 0.48*0.48 , c = 0.48*0.48;
 
 
 
 
 
-NOT_FOUND= (-1);
 NOT_EXIST= (int)(0xFFFF);
 
 //#define LEVEL ((double) 32.1) /* for siemens.vol */

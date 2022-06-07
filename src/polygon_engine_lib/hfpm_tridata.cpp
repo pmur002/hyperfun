@@ -678,11 +678,11 @@ double HFPolyMesh::TriData::edgeLength(int v1, int v2){
 }
 
 
-/*****************************/
-/***ATTRIBUTE : Function used for refinement
-/***i.e. if the function value is negative
-/***One has to find the closest vertex along the
-/***normal where it is positive*/
+/*****************************
+ ***ATTRIBUTE : Function used for refinement
+ ***i.e. if the function value is negative
+ ***One has to find the closest vertex along the
+ ***normal where it is positive*/
 //double HFPolyMesh::TriData::getVal(int i){ 
 //	return itsVFVal[i];
 //}

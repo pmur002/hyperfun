@@ -67,7 +67,7 @@ double bu[4],bv[4],bw[4];
 //double tmp_v,tmp_w;
 double *ctr_points;
 double *bbox;
-double old_bbox[6];
+// double old_bbox[6];
 int array_index,dim;
 double *x;
 double cube;
@@ -84,7 +84,7 @@ array_index=(int)f_a[1];
 HF_Get_Runtime_Array(array_index, &bbox, &dim);
 
 for(i=0;i<6;i++)
-old_bbox[i] = bbox[i];
+// old_bbox[i] = bbox[i];
 //*****Please change also the bounding box !!!!
 if(init_spline==1) {
 

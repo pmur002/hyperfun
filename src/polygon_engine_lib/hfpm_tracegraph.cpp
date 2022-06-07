@@ -45,8 +45,8 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 		if(itsConnect[Head][0]>=0){//Found Starting Vertex <Head>
 			Child1=itsConnect[Head][0];
 			Child2=itsConnect[Head][1];
-			//*********************
-			//*****  CHILD 1  *****
+			// *********************
+			// *****  CHILD 1  *****
 			if(itsConnect[Child1][0]==Head)//If Child1[0] is connected to Head 
 				if(itsConnect[Child1][1]!=Child2) itsConnect[Child1][0]=Child2;//Replace Child1[0]-Head Link with Child1[0]-Child2 Link
 				else itsConnect[Child1][0]=itsConnect[Child1][1]=-1;
@@ -54,8 +54,8 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 				if(itsConnect[Child1][0]!=Child2) itsConnect[Child1][1]=Child2;//Replace Child1[1]-Head Link with Child1[1]-Child2 Link
 				else itsConnect[Child1][0]=itsConnect[Child1][1]=-1;				
 			
-			//*********************
-			//*****  CHILD 2  *****
+			// *********************
+			// *****  CHILD 2  *****
 			if(itsConnect[Child2][0]==Head)//If Child2[0] is connected to Head 
 				if(itsConnect[Child2][1]!=Child1) itsConnect[Child2][0]=Child1;//Replace Child1[0]-Head Link with Child1[0]-Child2 Link
 				else itsConnect[Child2][0]=itsConnect[Child2][1]=-1;	
@@ -63,12 +63,12 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 				if(itsConnect[Child2][0]!=Child1) itsConnect[Child2][1]=Child1;//Replace Child2[1]-Head Link with Child2[1]-Child2 Link
 				else itsConnect[Child2][0]=itsConnect[Child2][1]=-1;	
 			
-			//******************
-			//*****  HEAD  *****
+			// ******************
+			// *****  HEAD  *****
 			itsConnect[Head][0]=itsConnect[Head][1]=-1;//Delete Head-Child1 and Head-Child2 Links
 			
-			//**********************
-			//*****  TRIANGLE  *****
+			// **********************
+			// *****  TRIANGLE  *****
 			tmpTri[0]=*I[Head];
 			tmpTri[1]=*I[Child1];
 			tmpTri[2]=*I[Child2];
@@ -88,8 +88,8 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 	int Head, Child1, Child2;
 	vector<int> tmpTri(3,-1);
 
-	//**********************
-	//*****  TESTING  ******
+	// **********************
+	// *****  TESTING  ******
 	int tmpH, tmpC;
 	for(tmpH=0; tmpH<12; tmpH++){
 		if(itsConnect[tmpH][0]>=0){
@@ -99,7 +99,7 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 				}
 			}
 		}
-	//**********************
+	// **********************
 	
 
 	for(Head=0; Head<12; Head++){
@@ -107,23 +107,23 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 			if((itsConnect[Head][1]<0)) cout << "HERE's the PROBLEM!!!! \n";//TMP: Error Checking 
 			Child1=itsConnect[Head][0];
 			Child2=itsConnect[Head][1];
-			//*********************
-			//*****  CHILD 1  *****
+			// *********************
+			// *****  CHILD 1  *****
 			if(itsConnect[Child1][0]==Head)//If Child1[0] is connected to Head 
 				itsConnect[Child1][0]=Child2;//Replace Child1[0]-Head Link with Child1[0]-Child2 Link
 			else//If Child1[1] is connected to Head 
 				itsConnect[Child1][1]=Child2;//Replace Child1[1]-Head Link with Child1[1]-Child2 Link
-			//*********************
-			//*****  CHILD 2  *****
+			// *********************
+			// *****  CHILD 2  *****
 			if(itsConnect[Child2][0]==Head) //If Child2[0] is connected to Head 
 				itsConnect[Child2][0]=Child1;//Replace Child1[0]-Head Link with Child1[0]-Child2 Link
 			else//If Child2[1] is connected to Head 
 				itsConnect[Child2][1]=Child1;//Replace Child2[1]-Head Link with Child2[1]-Child2 Link
-			//******************
-			//*****  HEAD  *****
+			// ******************
+			// *****  HEAD  *****
 			itsConnect[Head][0]=itsConnect[Head][1]=-1;//Delete Head-Child1 and Head-Child2 Links
-			//**********************
-			//*****  TRIANGLE  *****
+			// **********************
+			// *****  TRIANGLE  *****
 			if((*I[Head]!=*I[Child1]) && (*I[Head]!=*I[Child2]) && (*I[Child1]!=*I[Child2])){//An Actual Triangle				
 				double LC1H, LC2H, LCC; //Length C1-H C2-H C1-C2
 				int links=0;
@@ -268,8 +268,8 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 			else{//Not a Triangle (Two or More Vertices the same)
 				itsSkipCurrentTriangle++;
 				}
-			//**********************
-			//*****  TESTING  ******
+			// **********************
+			// *****  TESTING  ******
 			for(tmpH=0; tmpH<12; tmpH++){
 				if(itsConnect[tmpH][0]>=0){
 					tmpC=itsConnect[tmpH][0];
@@ -278,7 +278,7 @@ void HFPolyMesh::TraceGraph(int* I[12]){
 						}
 					}
 				}
-			//**********************
+			// **********************
 			}
 		}
 	}

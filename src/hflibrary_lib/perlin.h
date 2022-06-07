@@ -21,6 +21,7 @@ static double noise1(double arg);
 static double noise2(double vec[]);
 static double noise3(double vec[]);
 
+static double noise(double vec[], int len) __attribute__((unused));
 static double noise(double vec[], int len)
 {
 	switch (len) {

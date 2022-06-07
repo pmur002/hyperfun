@@ -56,7 +56,7 @@ void HFPolyMesh::CreateTriangles(){
 				//*** Cycle Through Faces ***
 				if(!empty){
 					for(int F=1;F<=6;F++){
-						int E=itsCellGrid[i][j][k];
+						// int E=itsCellGrid[i][j][k];
 						CurrentFaceState=itsCellGrid[i][j][k]&3;
 						switch (CurrentFaceState){
 							case NONE:

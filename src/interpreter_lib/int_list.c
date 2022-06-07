@@ -35,7 +35,9 @@
 */
 
 #include <stdlib.h>
+#ifdef DEBUG
 #include <assert.h>
+#endif
 #include "general.h"
 
 

@@ -91,7 +91,6 @@ double hfA_Crackles(double* f_a, String_Array_T* str_param)
 	double xt,yt,zt;
 	double noise;
 	double freq,phase;
-	double delta = 0.1;
 	int j;
 
 array_index = (int)f_a[0];

@@ -49,7 +49,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef DEBUG
 #include <assert.h>
+#endif
 #include <math.h>
 
 #include "general.h"
@@ -959,7 +961,8 @@ int HF_calc(/*  in*/  PN_T*         p_pn,
 	*/
   int i;  /* for cycle indeces                                            */
   int IC; /* instruction counter: -> p_pn->code_list   	           */
-  int SL, SD;
+  int SL __attribute__((unused));
+  int SD __attribute__((unused));
  int SX, SA, SS;    /* VAVAVA */
   int* instr; /* Instructions array                                       */
   double* c_data;/* Constants array                                          */

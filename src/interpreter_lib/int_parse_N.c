@@ -47,13 +47,16 @@
 					whereas it should have been: index += ..... + p_pns->S_dim;                  
 */
 
+#include <R.h>
+#include <Rinternals.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#ifdef DEBUG
 #include <assert.h>
-
+#endif
 #include "general.h"
 
 
@@ -2932,14 +2935,17 @@ int HF_CreateNewPNS(PN_T** p_p_pns)
   HF_Init_PN_List(&((*p_p_pns)->other_body_code_list));
   
   return_value = HF_Int_Array_Make(&((*p_p_pns)->code_list), 20);
-  assert (return_value != 0 );
+  if (return_value == 0 )
+      error("return_value == 0");
   
 
   return_value = HF_Int_Array_Make(&((*p_p_pns)->index_to_lexem), 40);
-  assert (return_value != 0 );
+  if (return_value == 0 )
+      error("return_value == 0");
 
   return_value = HF_Double_Array_Make(&((*p_p_pns)->constant_values), 20);
-  assert (return_value != 0 );
+  if (return_value == 0 )
+      error("return_value == 0");
 
   return 1;
 }

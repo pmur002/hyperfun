@@ -170,7 +170,7 @@ void HFInterpreter::parameters(vector<double> A){
   //Fill Stack with available values  NOTE: Leaves the rest the same
 	if (!itsStack)
 		return;
-  for(int i = 0; (i < getASize()) && (i < A.size()); i++)
+  for(int i = 0; (i < (int)getASize()) && (i < (int)A.size()); i++)
     itsStack[i + getXSize()]=A[i];
 }
 

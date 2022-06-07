@@ -33,9 +33,11 @@ using namespace std;
 void CMainApp::stlOut(){
 
 	int coord1,coord2,coord3;
-	double a1, a2, a3, b1, b2, b3, c1, c2, c3, N1, N2, N3, L;
+	double a1, a2, a3, b1, b2, b3, c1, c2, c3;
+        // double N1, N2, N3, L;
 //	double d1, d2, d3;
-	double n1p, n2p, n3p, nn;
+	double n1p, n2p, n3p;
+        // double nn;
 	bool bReverse = false;
 
 	ofstream toFile(itsCL.itsSTLName.c_str());
@@ -178,7 +180,7 @@ void CMainApp::stlBinaryOut()
 	char header[80];
 	char empty[2] = {0,0};
 	strcpy(header, itsCL.itsSTLName.c_str());
-	unsigned int nFacets = itsPolyMesh_->TriangleNum();
+	// unsigned int nFacets = itsPolyMesh_->TriangleNum();
 	toFile.write(header, 80);
 	stlWriteInt(toFile, itsPolyMesh_->TriangleNum());
 	for(int C=0; C<itsPolyMesh_->TriangleNum(); C++){

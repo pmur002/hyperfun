@@ -32,8 +32,6 @@ if not, see -  http://CGPL.org to get a copy of the License.
 #if !defined(MAINAPP_H)
 #define MAINAPP_H
 
-#pragma warning( disable : 4786 )
-
 
 #if _MSC_VER >= 1000
 #pragma once

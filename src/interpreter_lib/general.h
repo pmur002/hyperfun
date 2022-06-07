@@ -48,7 +48,7 @@
 
 //*****Added 10/07/01
 
-static int Flag_Initialisation=0;
+static int Flag_Initialisation __attribute__((unused)) = 0;
 //*******************
 
 struct PN_NODE_T;

@@ -141,14 +141,14 @@ int increment_noeud_w;
 init_spline = 0;
 
   
-  for ( i=0;i<MAX_POINTS+4;noeuds_u[i++]=0);
+ for ( i=0;i<MAX_POINTS+4;noeuds_u[i++]=0);
 
-	noeuds_u[0]=(double)valeur_noeud_courante_u;
-	noeuds_u[1]=(double)valeur_noeud_courante_u;
-	noeuds_u[2]=(double)valeur_noeud_courante_u;
-	noeuds_u[3]=(double)valeur_noeud_courante_u;
+ noeuds_u[0]=(double)valeur_noeud_courante_u;
+ noeuds_u[1]=(double)valeur_noeud_courante_u;
+ noeuds_u[2]=(double)valeur_noeud_courante_u;
+ noeuds_u[3]=(double)valeur_noeud_courante_u;
 	
-	for(i=3;i<u;i++)
+ for(i=3;i<u;i++)
     {
       noeuds_u[i]=(double)valeur_noeud_courante_u;
       valeur_noeud_courante_u+=increment_noeud_u;
@@ -164,12 +164,12 @@ init_spline = 0;
   increment_noeud_v=1;
   for (i=0;i<MAX_POINTS+4;noeuds_v[i++]=0);
 
-	noeuds_v[0]=(double)valeur_noeud_courante_v;
-	noeuds_v[1]=(double)valeur_noeud_courante_v;
-	noeuds_v[2]=(double)valeur_noeud_courante_v;
-	noeuds_v[3]=(double)valeur_noeud_courante_v;
+  noeuds_v[0]=(double)valeur_noeud_courante_v;
+  noeuds_v[1]=(double)valeur_noeud_courante_v;
+  noeuds_v[2]=(double)valeur_noeud_courante_v;
+  noeuds_v[3]=(double)valeur_noeud_courante_v;
 	
-	for(i=3;i<v;i++)
+  for(i=3;i<v;i++)
     {
       noeuds_v[i]=(double)valeur_noeud_courante_v;
       valeur_noeud_courante_v+=increment_noeud_v;
@@ -184,12 +184,12 @@ init_spline = 0;
   increment_noeud_w=1;
   for (i=0;i<MAX_POINTS+4;noeuds_w[i++]=0);
 
-	noeuds_w[0]=(double)valeur_noeud_courante_w;
-	noeuds_w[1]=(double)valeur_noeud_courante_w;
-	noeuds_w[2]=(double)valeur_noeud_courante_w;
-	noeuds_w[3]=(double)valeur_noeud_courante_w;
+  noeuds_w[0]=(double)valeur_noeud_courante_w;
+  noeuds_w[1]=(double)valeur_noeud_courante_w;
+  noeuds_w[2]=(double)valeur_noeud_courante_w;
+  noeuds_w[3]=(double)valeur_noeud_courante_w;
 	
-	for(i=3;i<w;i++)
+  for(i=3;i<w;i++)
     {
       noeuds_w[i]=(double)valeur_noeud_courante_w;
       valeur_noeud_courante_w+=increment_noeud_w;
@@ -293,6 +293,6 @@ return 0;
 
 
 
-static double *debug_pts;//[42875]={
+static double __attribute__((unused)) *debug_pts;//[42875]={
 
 #endif

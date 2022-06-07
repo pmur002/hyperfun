@@ -81,7 +81,6 @@ double hfA_Circles(double* f_a, String_Array_T* str_param)
 	int n_prob;
 	double xt,yt,zt;
 	double noise;
-	double delta = 0.1;
 	int j;
 
 array_index = (int)f_a[0];

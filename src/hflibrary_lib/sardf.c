@@ -932,7 +932,7 @@ int_sardef_1 (double xt, double yt,
 			  double R, double alpha)
 {
   double d=0;
-  double lim, lim2, g, g2, gt, aa, b, c;
+  double lim, g, g2, gt, aa, b, c;
   double Ds;
 
   double d2;
@@ -1047,7 +1047,7 @@ int_sardef_1 (double xt, double yt,
 	  }
 	} // end for I quarter
       // definition of lim2
-      lim2 = ((xt + R)*(xt+R)) + ((yt + R)*(yt+R));
+      // lim2 = ((xt + R)*(xt+R)) + ((yt + R)*(yt+R));
 	
       // III quarter
       if((xt < 0 ) && (yt < 0)) {
@@ -1315,7 +1315,7 @@ int_sardef_and_gradient_1 (const double xt, const double yt,
 			   double grad[3])
 {
   double d=0;
-  double lim, lim2, g, g2, gt, aa, b, c;
+  double lim, g, g2, gt, aa, b, c;
   double Ds;
 
   double d2;
@@ -1494,7 +1494,7 @@ int_sardef_and_gradient_1 (const double xt, const double yt,
 	  }
 	} // end for I quarter
       // definition of lim2
-      lim2 = ((xt + R)*(xt+R)) + ((yt + R)*(yt+R));
+      // lim2 = ((xt + R)*(xt+R)) + ((yt + R)*(yt+R));
 	
       // III quarter
       if((xt < 0 ) && (yt < 0)) {

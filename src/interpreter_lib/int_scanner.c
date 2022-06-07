@@ -77,7 +77,7 @@ int HF_get_token_internal(char*                p_str, /* program ASCIIZ string *
   double temp;
   int error;
    
-  int is_numeric = 0, has_real = 0;
+  int is_numeric = 0;
    
   /* Skip Delimeters */
   while((p_str[*i] == ' ') || (p_str[*i] == '\n') || (p_str[*i] == '\t'))
@@ -329,7 +329,6 @@ int HF_get_token_internal(char*                p_str, /* program ASCIIZ string *
 	     
 	    if( (isdigit(p_str[*i])))
 	      {
-		has_real = 1;
 		temp = 10.0;
 		while(isdigit(p_str[*i]))
 		  {

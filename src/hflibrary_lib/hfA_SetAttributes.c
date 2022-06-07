@@ -24,8 +24,8 @@
 
 
 /* 
-//Set a set of attributes if f>0
-/*Call: hfA_SetAttributes(f,s,s1);
+Set a set of attributes if f>0
+Call: hfA_SetAttributes(f,s,s1);
 
 definition : 
 

@@ -83,11 +83,11 @@ double HFPolyMesh::CalcVal(const double pos[3]){
 }
 
 /******For Attibutes : During the refinement process
-/******vertices where the function value is negative
-/******due to the polygonalisation, are replaced 
-/******with another close vertices where the function 
-/****** value becomes positive. Thus, a new normal is need.
-*/
+ ******vertices where the function value is negative
+ ******due to the polygonalisation, are replaced 
+ ******with another close vertices where the function 
+ ****** value becomes positive. Thus, a new normal is need.
+ */
 
 void HFPolyMesh::CalcVNormal(int i,vector<double> *norm)
 {

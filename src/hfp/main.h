@@ -26,7 +26,6 @@
 
 // INCLUDES
 //BEN
-#pragma warning( disable : 4786 )
 
 
 #ifdef WIN32

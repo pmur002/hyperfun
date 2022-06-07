@@ -63,7 +63,7 @@ void HFPolyMesh::Refinement()
 {
 	//int N=0;
 	int V=itsData.getNumV();
-	int i=0, j=0;
+	int i=0;
 
 	double *tmpSAttributes =new double[itsSSize];
 
@@ -140,7 +140,7 @@ void HFPolyMesh::GeneralRefinement(void)
 {
 	//int N=0;
 	int V=itsData.getNumV();
-	int i=0, j=0;
+	int i=0;
 
 	double *tmpSAttributes =new double[itsSSize];
 

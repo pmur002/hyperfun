@@ -41,7 +41,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#ifdef DEBUG
 #include <assert.h>
+#endif
 #include "general.h"
 
 

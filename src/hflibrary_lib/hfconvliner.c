@@ -67,7 +67,7 @@ double hfConvLineR(double* f_a, String_Array_T* str_param) {
   double *begin;   /* beginning Point */
   double *end;     /* ending Point */
   double R;
-  double T;        /* threshold value */
+  double T = 0;        /* threshold value */
   double ax, ay, az;   /* normalized vector from beginnig to ending Point */
   double dx, dy, dz;   /* d = r - b */
   double pT,qT2;

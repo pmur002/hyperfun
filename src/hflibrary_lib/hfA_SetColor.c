@@ -24,8 +24,8 @@
 
 
 /* 
-//Set a color if f>0
-/*Call: hfA_SetColor(f,s,s1);
+Set a color if f>0
+Call: hfA_SetColor(f,s,s1);
 
 definition : 
 

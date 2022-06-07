@@ -153,27 +153,24 @@ void HFPolyMesh::FillVertices(){
 	}
 
 void HFPolyMesh::VertCalc(int i, int j, int k, int select, const double lNodePos[3]){
-	int i0,j0,k0,i1,j1,k1,i2,j2,k2;
+	int i1,j1,k1,i2,j2,k2;
 
 	switch(select){
 		case 0:	
-			if(i-1<0) i0=i; else i0=i-1; 
 			i1=i+1; 
 			if(i+2>itsGridSize[0]) i2=i1; else i2=i+2;	
-			j0=j1=j2=j;
-			k0=k1=k2=k;
+			j1=j2=j;
+			k1=k2=k;
 			break;
 		case 1: 
-			i0=i1=i2=i;
-			if(j-1<0) j0=j;	else j0=j-1;
+			i1=i2=i;
 			j1=j+1; 
 			if(j+2>itsGridSize[1]) j2=j1; else j2=j+2;	
-			k0=k1=k2=k;
+			k1=k2=k;
 			break;
 		case 2: 
-			i0=i1=i2=i;
-			j0=j1=j2=j;	
-			if(k-1<0) k0=k;	else k0=k-1; 
+			i1=i2=i;
+			j1=j2=j;	
 			k1=k+1; 
 			if(k+2>itsGridSize[2]) k2=k1; else k2=k+2;	
 			break;

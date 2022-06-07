@@ -41,8 +41,6 @@ if not, see -  http://CGPL.org to get a copy of the License.
 #if !defined(HFPolyMesh_H)
 #define HFPolyMesh_H
 
-#pragma warning( disable : 4786 )
-
 #include <vector>
 #include <iostream>
 #include <map>
@@ -178,9 +176,10 @@ public:
 		void initVNormal();
 		void initTNormal();
 
-		/**Modified by schmitt :03 May 2001
-		/**Call inside the hfpolymesh class. 
-		/**No need to use a double *, and copy it into a vector data type*/
+		/* Modified by schmitt :03 May 2001
+                 * Call inside the hfpolymesh class. 
+                 * No need to use a double *, and copy it into a 
+                 * vector data type */
 		void setVNormal(int , std::vector<double>);
 		void setTNormal(int , std::vector<double>);
 		std::vector<double> calcTNormal(int);

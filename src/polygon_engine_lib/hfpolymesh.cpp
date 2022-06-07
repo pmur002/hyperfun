@@ -456,7 +456,7 @@ vector<int> HFPolyMesh::DimMap(){
 
 void HFPolyMesh::Constants(vector<double> con){
 
-	for(int i=0; i<itsInterpreter.getXSize() && i<con.size(); i++){
+	for(int i=0; i<(int)itsInterpreter.getXSize() && i<(int)con.size(); i++){
 
 		itsSendingX[i]=con[i];
 
