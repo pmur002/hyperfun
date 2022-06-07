@@ -341,7 +341,7 @@ typedef struct                                         /* Pol_Not_T */
  /* 1*/ char* body_name;                                /* Pol_Not_T */
 /* 2*/ int X_dim;                                      /* Pol_Not_T */
 /* 3*/ int A_dim;                                      /* Pol_Not_T */
-/* 4*/ int S_dim;         /* VAVAVA */                  /* Pol_Not_T *
+/* 4*/ int S_dim;         /* VAVAVA */                  /* Pol_Not_T */
 /* 5*/ int stack_size;           /* with A, X, S */     /* Pol_Not_T */
 /* 6*/ Int_Array_T      code_list;                     /* Pol_Not_T */
 /* 7*/ Int_Array_T      index_to_lexem; /* line, pos*/ /* Pol_Not_T */
