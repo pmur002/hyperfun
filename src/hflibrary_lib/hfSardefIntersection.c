@@ -5,6 +5,9 @@ hfSardefIntG1(f1,f2,r,alpha,g1,g2,g);
 hfSardefIntG2(f1,f2,r1,r2,g1,g2,g);
 */
 
+#include <R.h>
+#include <Rinternals.h>
+
 #include <math.h>
 #include <stdio.h>
 #include "general.h"

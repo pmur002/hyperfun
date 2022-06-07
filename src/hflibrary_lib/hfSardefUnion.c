@@ -5,6 +5,9 @@ hfSardefUnionG1(f1,f2,r,alpha,gf1,gf2,gf);
 hfSardefUnionG2(f1,f2,r1,r2,gf1,gf2,gf);
 */
 
+#include <R.h>
+#include <Rinternals.h>
+
 #include <math.h>
 #include <stdio.h>
 #include "general.h"

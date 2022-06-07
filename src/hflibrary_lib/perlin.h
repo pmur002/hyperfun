@@ -6,6 +6,8 @@
 //Academic Press Professional
 //ISBN : 0-12-228730-4
 
+#include <R.h>
+#include <Rinternals.h>
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -196,25 +198,37 @@ static void normalize3(double v[3])
 static void init(void)
 {
 	int i, j, k;
-srand( (unsigned)time( NULL ) );
+        GetRNGstate();
 
 	for (i = 0 ; i < PERLIN_B ; i++) {
 		p[i] = i;
 
-		g1[i] = (double)((rand() % (PERLIN_B + PERLIN_B)) - PERLIN_B) / PERLIN_B;
+                // The messing around between ints and doubles is an attempt
+                // to replicate the original code that used rand() using 
+                // R's unif_rand()
+		g1[i] = (double)(((int)(((double)RAND_MAX+1)*unif_rand()) % 
+                                  (PERLIN_B + PERLIN_B)) - 
+                                 PERLIN_B) / PERLIN_B;
 
 		for (j = 0 ; j < 2 ; j++)
-			g2[i][j] = (double)((rand() % (PERLIN_B + PERLIN_B)) - PERLIN_B) / PERLIN_B;
+			g2[i][j] = (double)(((int)(((double)RAND_MAX+1)*
+                                                   unif_rand()) % 
+                                             (PERLIN_B + PERLIN_B)) - 
+                                            PERLIN_B) / PERLIN_B;
 		normalize2(g2[i]);
 
 		for (j = 0 ; j < 3 ; j++)
-			g3[i][j] = (double)((rand() % (PERLIN_B + PERLIN_B)) - PERLIN_B) / PERLIN_B;
+			g3[i][j] = (double)(((int)(((double)RAND_MAX+1)*
+                                                   unif_rand()) % 
+                                             (PERLIN_B + PERLIN_B)) - 
+                                            PERLIN_B) / PERLIN_B;
 		normalize3(g3[i]);
 	}
 
 	while (--i) {
 		k = p[i];
-		p[i] = p[j = rand() % PERLIN_B];
+		p[i] = p[j = (int)(((double)RAND_MAX+1)*unif_rand()) % 
+                         PERLIN_B];
 		p[j] = k;
 	}
 
@@ -226,6 +240,7 @@ srand( (unsigned)time( NULL ) );
 		for (j = 0 ; j < 3 ; j++)
 			g3[PERLIN_B + i][j] = g3[i][j];
 	}
+        PutRNGstate();
 }
 
 

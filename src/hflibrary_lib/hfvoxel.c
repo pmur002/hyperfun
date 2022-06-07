@@ -22,6 +22,8 @@
 
 ==============================================================================*/
 
+#include <R.h>
+#include <Rinternals.h>
 
 	/*
 Core HyperFun Library
@@ -136,7 +138,7 @@ if(readflag == 0){
 /*------------------------------------------------------------------*/
  if (!(fin=fopen("siemens.vol","rb")))
  {
-  printf("Cannot open data file \n");
+  Rprintf("Cannot open data file \n");
   ////exit(-1);
  }
 // num=read(fileno(fin),volumeData,sizeof( unsigned char)*NX*NY*NZ)/sizeof( unsigned char);
@@ -144,9 +146,9 @@ if(readflag == 0){
  //fread( list, sizeof( char ), 25, stream );
       
   
-  printf("%ld bytes read \n", num);
+  Rprintf("%ld bytes read \n", num);
  fclose(fin);
- printf("Data file read \n");
+ Rprintf("Data file read \n");
  readflag = 1;
 /*------------------------------------------------------------------*/
 }

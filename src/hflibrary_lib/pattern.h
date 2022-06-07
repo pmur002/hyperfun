@@ -1,4 +1,6 @@
 
+#include <R.h>
+#include <Rinternals.h>
 
 
 #include <math.h>
@@ -208,19 +210,24 @@ static void InitPerlin(int seed)
 {
 	int i, j, k;
 
-	srand(seed);
+        GetRNGstate();
 	
 	for (i = 0 ; i < B ; i++) {
 		p[i] = i;
 
 		for (j = 0 ; j < 3 ; j++)
-			g3[i][j] = (double)((rand() % (B + B)) - B) / B;
+                    // The messing around between ints and doubles is an attempt
+                    // to replicate the original code that used rand() using 
+                    // R's unif_rand()
+                    g3[i][j] = (double)(((int)(((double)RAND_MAX+1)*
+                                               unif_rand()) % 
+                                         (B + B)) - B) / B;
 		normalize3(g3[i]);
 	}
 
 	while (--i) {
 		k = p[i];
-		p[i] = p[j = rand() % B];
+		p[i] = p[j = (int)(((double)RAND_MAX+1)*unif_rand()) % B];
 		p[j] = k;
 	}
 
@@ -229,6 +236,8 @@ static void InitPerlin(int seed)
 		for (j = 0 ; j < 3 ; j++)
 			g3[B + i][j] = g3[i][j];
 	}
+
+        PutRNGstate();
 }
 
 
