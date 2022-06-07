@@ -52,19 +52,19 @@ double hfSardefIntG1(double *f_a, String_Array_T *str_param)
 	array_index=(int)f_a[0];
 	HF_Get_Runtime_Array(array_index,&g,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	array_index=(int)f_a[1];
 	HF_Get_Runtime_Array(array_index,&gf2,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	array_index=(int)f_a[2];
 	HF_Get_Runtime_Array(array_index,&gf1,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	alpha=f_a[3];
@@ -86,19 +86,19 @@ double hfSardefIntG2(double *f_a, String_Array_T *str_param)
 	array_index=(int)f_a[0];
 	HF_Get_Runtime_Array(array_index,&g,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	array_index=(int)f_a[1];
 	HF_Get_Runtime_Array(array_index,&gf2,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	array_index=(int)f_a[2];
 	HF_Get_Runtime_Array(array_index,&gf1,&dim);
 	if(dim!=3)
-		printf("wrong size of array\n");
+		Rprintf("wrong size of array\n");
 
 
 	r2=f_a[3];

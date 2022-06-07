@@ -54,6 +54,9 @@
 ###########################################################################
 */
 
+#include <R.h>
+#include <Rinternals.h>
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -96,8 +99,7 @@ double hfConvLine(double* f_a, String_Array_T* str_param) {
     l = sqrt(SQ(end[3*n] - begin[3*n]) + SQ(end[3*n+1] - begin[3*n+1]) + SQ(end[3*n+2] - begin[3*n+2]));
     
     if(l == 0.0) {
-      printf("ERROR:Tips of the segment take same coordinate!\n");
-      exit (EXIT_FAILURE);
+        error("ERROR:Tips of the segment take same coordinate!\n");
     }
 
     ax = (end[3*n] - begin[3*n]) / l;

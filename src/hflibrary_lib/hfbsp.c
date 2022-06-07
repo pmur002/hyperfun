@@ -227,7 +227,7 @@ BSPTree* sbspBuildBSP(int nVertexNum, double* pVertexData, int nFacesNum, int* p
 	pTree->pFront = NULL;
 	pTree->pBack = NULL;
 	sbspProcessTree(pTree, nPolygonsSize, pPolygons);
-	printf("Split %d times", g_iSplitCount);
+	Rprintf("Split %d times", g_iSplitCount);
 	free(pPolygons);
 	return pTree;
 }
@@ -435,7 +435,7 @@ int sbspSplitPolygon(int nIndex, BSPPlane* planeSplit, int* oFront, int* oBack)
 		{
 			if (nRayIsecIt >= 2)
 			{
-				printf("points/plane intersection\n");
+				Rprintf("points/plane intersection\n");
 				return 0;
 			}
 			nRayIsec[nRayIsecIt] = i;
@@ -489,7 +489,7 @@ int sbspSplitPolygon(int nIndex, BSPPlane* planeSplit, int* oFront, int* oBack)
 					nRayIsecIt++;
 					if (nRayIsecIt == 2)
 					{
-						printf ("one point and edges\n");
+						Rprintf ("one point and edges\n");
 						return 0;
 					}
 				}
@@ -536,7 +536,7 @@ int sbspSplitPolygon(int nIndex, BSPPlane* planeSplit, int* oFront, int* oBack)
 				if (t < 1.0 && t > 0.0){
 					if (nRayIsecIt >= 2)
 					{
-						printf("ray intersects too much\n");
+						Rprintf("ray intersects too much\n");
 						return 0;
 					}
 					nRayIsec[nRayIsecIt] = i;
@@ -584,7 +584,7 @@ int sbspSplitPolygon(int nIndex, BSPPlane* planeSplit, int* oFront, int* oBack)
 	cl = sbspClassifyPolygon(g_nMeshDataSize-1, planeSplit);
 	if (cl == polygon_spanning || cl == polygon_coincident)
 	{
-		printf ("polygon span or coincident\n");
+		Rprintf ("polygon span or coincident\n");
 		return 0;
 	}
 	if (cl == polygon_front)
@@ -645,7 +645,7 @@ void	sbspPrintTree(BSPTree* tree, int nStack)
 	char indent[1024];
 	if (nStack >= 1024)
 	{
-		printf("overflow!\n");
+		Rprintf("overflow!\n");
 		return;
 	}
 	for (i = 0; i < nStack; i++)
@@ -653,25 +653,25 @@ void	sbspPrintTree(BSPTree* tree, int nStack)
 		indent[i] = ' ';
 	}
 	indent[nStack] = 0;
-	printf("%spolygon: ",indent);
-	printf("%d \n", tree->firstPolygon);
+	Rprintf("%spolygon: ",indent);
+	Rprintf("%d \n", tree->firstPolygon);
 
 	if (tree->pFront)
 	{
-		printf("%sfront tree\n", indent);
+		Rprintf("%sfront tree\n", indent);
 		sbspPrintTree(tree->pFront, nStack+1);
 	}
 	else
 	{
-		printf("%sfront tree: NULL\n", indent);
+		Rprintf("%sfront tree: NULL\n", indent);
 	}
 	if (tree->pBack)
 	{
-		printf("%sback tree\n", indent);
+		Rprintf("%sback tree\n", indent);
 		sbspPrintTree(tree->pBack, nStack+1);
 	}
 	else
 	{
-		printf("%sback tree: NULL\n", indent);
+		Rprintf("%sback tree: NULL\n", indent);
 	}
 }

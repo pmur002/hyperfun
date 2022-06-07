@@ -53,10 +53,14 @@
 ###########################################################################
 */
 
+#include <R.h>
+#include <Rinternals.h>
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include "general.h"
+
 
 #define SQ(x) ((x)*(x))
 
@@ -91,8 +95,7 @@ double hfConvCurve(double* f_a, String_Array_T* str_param) {
     l = sqrt(SQ(vect[3*(n+1)] - vect[3*n]) + SQ(vect[3*(n+1)+1] - vect[3*n+1]) + SQ(vect[3*(n+1)+2] - vect[3*n+2]));
 
     if(l == 0.0) {
-      printf("ERROR:Tips of the segment take same coordinate!\n");
-      exit (EXIT_FAILURE);
+        error("Tips of the segment take same coordinate!\n");
     }
 
     ax = (vect[3*(n+1)] - vect[3*n]) / l;
