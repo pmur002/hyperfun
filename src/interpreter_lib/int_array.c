@@ -293,7 +293,9 @@ int HF_Add_To_String_Array(String_Array_T* ar, char* item)
 	{
 	  ar->amount++;
 	  ar->size = new_size;
-	  strncpy(ar->data, item, strlen(item)+1);
+          // Space required is precalculated so no need for strncpy() check
+          // (satisfy compiler warning)
+	  strcpy(ar->data, item);
 	  return 1;
 	}
       return 0;
@@ -305,7 +307,9 @@ int HF_Add_To_String_Array(String_Array_T* ar, char* item)
 	{
 	  ar->data = temp;
 	  ar->amount++;
-	  strncpy(ar->data+ar->size, item, strlen(item)+1);
+          // Space required is precalculated so no need for strncpy() check
+          // (satisfy compiler warning)
+	  strcpy(ar->data+ar->size, item);
 	  ar->size = new_size;
 	  return 1;
 	}
@@ -452,7 +456,9 @@ int  HF_Add_To_Name_Array(Name_Array_T* ar, char* item, int i, int c, int f)
 	{
 	  ar->amount++;
 	  ar->size = new_size;
-	  strncpy(ar->string_data, item, strlen(item)+1);
+          // Space required is precalculated so no need for strncpy() check
+          // (satisfy compiler warning)
+	  strcpy(ar->string_data, item);
 	  
 	  ar->int_data = malloc(3*sizeof(int));
 	  if(ar->int_data == NULL)
@@ -478,7 +484,9 @@ int  HF_Add_To_Name_Array(Name_Array_T* ar, char* item, int i, int c, int f)
 	{
 	  ar->string_data = temp;
 	  ar->amount++;
-	  strncpy(ar->string_data + ar->size, item, strlen(item)+1);
+          // Space required is precalculated so no need for strncpy() check
+          // (satisfy compiler warning)
+	  strcpy(ar->string_data + ar->size, item);
 	  ar->size = new_size;
 	  
 	  int_temp = realloc(ar->int_data, sizeof(int) * ar->amount * 3);

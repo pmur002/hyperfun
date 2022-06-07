@@ -187,7 +187,7 @@ double Bernstein(int i,int n, double t)
 	return Combin[n][i]*pow((1.-t),n-i)*pow(t,i);
 }
 
-init_bezier=1;
+int init_bezier=1;
 double *bu,*bv,*bw;
 void InitBezier(int l,int m,int n){
 

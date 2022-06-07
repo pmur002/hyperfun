@@ -2966,7 +2966,9 @@ PN_T* HF_Copy_PNS(PN_T* p_pns)
     }
   else
     {
-      strncpy(result->body_name, p_pns->body_name, strlen(p_pns->body_name)+1);
+      // Space required is precalculated so no need for strncpy() check
+      // (satisfy compiler warning)
+      strcpy(result->body_name, p_pns->body_name);
       
       result->X_dim = p_pns->X_dim;
       result->A_dim = p_pns->A_dim;
@@ -3121,7 +3123,10 @@ int HF_parse(char*        p_program,
 				else
 				{
 					int er;
-					strncpy(p_pns->body_name, sps.str_buffer, strlen(sps.str_buffer)+1);
+                                        // Space required is precalculated 
+                                        // so no need for strncpy() check
+                                        // (satisfy compiler warning)
+					strcpy(p_pns->body_name, sps.str_buffer);
 					memory_status = HF_Get_X_A(p_program, p_pns, p_er_list, &sps, &er);
 					if(!memory_status || er)
 						break;

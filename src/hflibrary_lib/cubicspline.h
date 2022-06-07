@@ -31,11 +31,11 @@
 
 #define MAX_POINTS 200
 #define EPSILON 0.01
-static double noeuds_u[MAX_POINTS];
-static double noeuds_v[MAX_POINTS];
-static double noeuds_w[MAX_POINTS];
+static double noeuds_u[MAX_POINTS + 4];
+static double noeuds_v[MAX_POINTS + 4];
+static double noeuds_w[MAX_POINTS + 4];
 static int init_spline=1;
-static U,V,W;
+static int U,V,W;
 static double *** ext_ctr_pts;
 
 void InitArray(int u,int v,int w,double * ctr_points){

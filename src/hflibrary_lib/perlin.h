@@ -88,7 +88,7 @@ static double noise2(double vec[2])
 {
 	int bx0, bx1, by0, by1, b00, b10, b01, b11;
 	double rx0, rx1, ry0, ry1, *q, sx, sy, a, b, u, v;
-	register i, j;
+	int i, j;
 
 	if (Pstart ) {
 		Pstart  = 0;
@@ -126,7 +126,7 @@ static double noise3(double vec[3])
 {
 	int bx0, bx1, by0, by1, bz0, bz1, b00, b10, b01, b11;
 	double rx0, rx1, ry0, ry1, rz0, rz1, *q, sy, sz, a, b, c, d, t, u, v;
-	register i, j;
+	int i, j;
 
 	if (Pstart ) {
 		Pstart  = 0;

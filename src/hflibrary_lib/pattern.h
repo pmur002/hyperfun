@@ -129,9 +129,7 @@ static double s_curve(double t) {
 	return ( t * t * (3. - 2. * t) );
 }
 
-static double lerp(t, a, b) {
-	return 	( a + t * (b - a) );
-}
+#define lerp(t, a, b) ( a + t * (b - a) )
 
 static void setup_pattern(int i, int b0, int b1, double r0, double r1, double *vec) 
 {
@@ -147,7 +145,7 @@ static double Noise3(double *vec)
 {
 	int bx0, bx1, by0, by1, bz0, bz1, b00, b10, b01, b11;
 	double rx0, rx1, ry0, ry1, rz0, rz1, *q, sy, sz, a, b, c, d, t, u, v;
-	register i, j;
+	int i, j;
 
 	
 

@@ -144,7 +144,7 @@ if(readflag == 0){
  //fread( list, sizeof( char ), 25, stream );
       
   
-  printf("%d bytes read \n", num);
+  printf("%ld bytes read \n", num);
  fclose(fin);
  printf("Data file read \n");
  readflag = 1;
