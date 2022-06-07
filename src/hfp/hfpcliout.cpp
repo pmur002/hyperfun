@@ -21,6 +21,8 @@ if not, see -  http://CGPL.org to get a copy of the License.
 
 ==============================================================================*/
 
+#include "Rcpp.h"
+
 #define UNITSMULTIPLIER 1
 
 #include "mainapp.h"
@@ -41,8 +43,7 @@ int CMainApp::cliOut() {
 	ofstream toFile(itsCL.itsCLIName.c_str());
 
 	if (!toFile) {
-		cout << "\n File: " << itsCL.itsCLIName << " could not be opened.\n";
-		exit(0);
+            Rcpp::stop("File: %s could not be opened", itsCL.itsCLIName);
 	}
 	toFile << "$$HEADERSTART\n";
 	toFile << "$$ASCII\n";

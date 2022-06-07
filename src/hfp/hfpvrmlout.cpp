@@ -24,7 +24,7 @@
 ==============================================================================*/
 
 
-
+#include "Rcpp.h"
 
 
 #include "mainapp.h"
@@ -37,8 +37,7 @@ void CMainApp::vrmlOut(){
   //Open file
 	std::ofstream toFile(itsCL.itsWRLName.c_str());
   if(!toFile){
-    std::cout << "\n File: " << itsCL.itsWRLName << " could not be opened.\n";
-    exit(0);
+      Rcpp::stop("File: %s could not be opened", itsCL.itsWRLName);
   }
 	
   //Write file

@@ -24,6 +24,7 @@ if not, see -  http://CGPL.org to get a copy of the License.
 
 ==============================================================================*/
 
+#include "Rcpp.h"
 
 
 // MainApp.cpp: implementation of the CMainApp class.
@@ -58,13 +59,7 @@ CMainApp::CMainApp(int & argc, char ** argv)
 		itsCL.Init(argc, argv);
 	}
 	catch(CommandLineError err){
-		std::cout << err.error << "\n\n";
-
-
-
-		std::cout << err.help << "\n\n";
-		std::cout << "Exiting..." << "\n\n";
-		exit(0);
+            Rcpp::stop("%s\n%s", err.error, err.help);
 	}
 }
 
@@ -125,8 +120,7 @@ void CMainApp::readFile(){
 	//Read file
 	std::ifstream fromFile(itsCL.itsModel.c_str());
 	if(!fromFile){
-		std::cout << "\n File: " << itsCL.itsModel << " not found\n";
-		exit(0);
+            Rcpp::stop("File: %s not found", itsCL.itsModel);
 	}
 	//Read file into string
 	char ch;
@@ -136,8 +130,7 @@ void CMainApp::readFile(){
 	itsString+=ch;
 	//Check correct transfer
 	if(!fromFile.eof()){
-		std::cout << "\nFile Read Error.\n";
-		exit(0);
+            Rcpp::stop("File Read Error");
 	}
 	//Close fromFile
 	fromFile.close();
@@ -152,18 +145,12 @@ void CMainApp::parseString(){
 	}
 	//Check for memory error during Parse
 	catch(MemoryError me){
-		std::cout << "\nMemory Allocation Error on Parse!\nNot Enough Memory to complete Parse!\n";
-		std::cout << "Occured at: " << me.error << "\n";
-		std::cout << "Exiting..." << "\n";
-		exit(0);
+            Rcpp::stop("Memory Allocation Error on Parse!\nNot Enough Memory to complete Parse!\nOccured at: %s", me.error);
 	}
 	//Check for Errors in File while parsing
 	catch(ParseError pe){
-		std::cout << "Error: " << pe.error; 
-		std::cout << "\n" << "       line = " << pe.line;
-		std::cout << " , position = " << pe.pos << "\n" << "\n";
-		std::cout << "Exiting..." << "\n";
-		exit(0);
+            Rcpp::stop("Error: %s (line %d, position %d)", 
+                       pe.error, pe.line, pe.pos);
 	}
 
 
@@ -194,9 +181,7 @@ void CMainApp::generateTriangles(){
 		itsPolyMesh_ = new HFPolyMesh(itsInterpreter);
 	}
 	catch(HFPError he){
-		std::cout << "Error: " << he.error << "\n";
-		std::cout << "Exiting..." << "\n";
-		exit(0);
+            Rcpp::stop("Error: %s", he.error);
 	}
 
 	itsPolyMesh_->Timer(itsCL.itsTimeReport);

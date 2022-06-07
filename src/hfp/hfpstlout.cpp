@@ -22,6 +22,7 @@ if not, see -  http://CGPL.org to get a copy of the License.
 
 ==============================================================================*/
 
+#include "Rcpp.h"
 
 
 #include "mainapp.h"
@@ -39,8 +40,7 @@ void CMainApp::stlOut(){
 
 	ofstream toFile(itsCL.itsSTLName.c_str());
 	if(!toFile){
-		std::cout << "\n File: " << itsCL.itsSTLName << " could not be opened.\n";    	
-		exit(0);
+            Rcpp::stop("File: %s could not be opened", itsCL.itsSTLName);
 	}
 
 	toFile << "solid " <<itsCL.itsSTLName<<endl;
@@ -172,8 +172,7 @@ void CMainApp::stlBinaryOut()
 	ofstream toFile;
 	toFile.open(itsCL.itsSTLName.c_str(), ios_base::binary);
 	if(!toFile){
-		std::cout << "\n File: " << itsCL.itsSTLName << " could not be opened.\n";    	
-		exit(0);
+            Rcpp::stop("File: %s could not be opened", itsCL.itsSTLName);
 	}
 
 	char header[80];
