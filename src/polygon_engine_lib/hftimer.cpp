@@ -33,6 +33,8 @@
 
 ==============================================================================*/
 
+#include "Rcpp.h"
+
 // HFTimer.cpp: implementation of the HFTimer class.
 //
 //////////////////////////////////////////////////////////////////////
@@ -54,8 +56,8 @@ HFTimer::~HFTimer(){
 void HFTimer::stop(){
 
 	itsFinish=clock();
-	cout << itsString << ": ";
-	cout << (double)((double)(itsFinish-itsStart)/(double)CLOCKS_PER_SEC) << endl << endl;
+	Rcpp::Rcout << itsString << ": ";
+	Rcpp::Rcout << (double)((double)(itsFinish-itsStart)/(double)CLOCKS_PER_SEC) << endl << endl;
 	}
 
 void HFTimer::start(string str){

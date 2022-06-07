@@ -33,7 +33,7 @@
 
 ==============================================================================*/
 
-
+#include "Rcpp.h"
 
 #include "hfpolymesh.h"
 using namespace std;
@@ -141,7 +141,7 @@ void HFPolyMesh::Calc(){
 
 	if(itsRefinement){
 		if(!itsNormals){
-			std::cout<<"Normals calculation required for Attributes..."<<endl;
+			Rcpp::Rcout<<"Normals calculation required for Attributes..."<<endl;
 			if(itsTimer) itsT.start("Time to Calculate Normals for Vertices");
 				CreateVNormals();
 				CreateTNormals();

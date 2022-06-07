@@ -23,6 +23,8 @@
 
 ==============================================================================*/
 
+#include "Rcpp.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <float.h>
@@ -57,17 +59,17 @@ HFPolyMesh* DcGenerator::generate()
 {
 	pTmpS = new double[func->getSSize()];
 
-	cout << endl << "Sampling in 3d-grids" << endl;
+	Rcpp::Rcout << endl << "Sampling in 3d-grids" << endl;
 	sampleValue();
 
-	cout << "Generating Quad Mesh" << endl;
+	Rcpp::Rcout << "Generating Quad Mesh" << endl;
 	generateQuadMesh();
 //	cout << quadMesh->face_N << "quad" << endl;
 //	cout << quadMesh->vertex_N << "vertex" << endl;
 
-	cout << "Converting HFPolyMesh" << endl;
+	Rcpp::Rcout << "Converting HFPolyMesh" << endl;
 	createHfMesh();
-	cout << "Polygonization is done" << endl;
+	Rcpp::Rcout << "Polygonization is done" << endl;
 	hf_mesh->GeneralRefinement();
 	return hf_mesh;
 }
@@ -114,7 +116,7 @@ void DcGenerator::sampleValue()
 	double iZ = (maxZ - minZ)/(gZ-1);
 	value = (double ***)new double*[gZ];
 	for(i=0; i<gZ; i++){
-		cout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ;
+		Rcpp::Rcout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ;
 		double z = minZ + i*iZ;
 		value[i] = new double*[gY];
 		for(int j=0; j<gY; j++){
@@ -126,7 +128,7 @@ void DcGenerator::sampleValue()
 			}
 		}
 	}
-	cout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ << endl;
+	Rcpp::Rcout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ << endl;
 }
 
 void DcGenerator::generateQuadMesh()
@@ -223,7 +225,7 @@ void DcGenerator::generateQuadMesh()
 
 					//error check (never satisfied, I hope)
 					if(i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0){
-						cout << "Error: found a strange edge?" << endl;
+						Rcpp::Rcout << "Error: found a strange edge?" << endl;
 						continue;
 					}
 
@@ -309,7 +311,7 @@ void DcGenerator::generateQuadMesh()
 
 					//error check (never satisfied, I hope)
 					if(i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0){
-						cout << "Error: found a strange edge?" << endl;
+						Rcpp::Rcout << "Error: found a strange edge?" << endl;
 						continue;
 					}
 
@@ -395,7 +397,7 @@ void DcGenerator::generateQuadMesh()
 
 					//error check (never satisfied, I hope)
 					if(i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0){
-						cout << "Error: found a strange edge?" << endl;
+						Rcpp::Rcout << "Error: found a strange edge?" << endl;
 						continue;
 					}
 

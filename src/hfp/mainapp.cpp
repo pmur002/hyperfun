@@ -73,19 +73,19 @@ CMainApp::~CMainApp(){
 
 
 int CMainApp::init() {
-	std::cout << "Initialization.";
-	if(itsCL.itsTimeReport) std::cout << "\n\n";
+	Rcpp::Rcout << "Initialization.";
+	if(itsCL.itsTimeReport) Rcpp::Rcout << "\n\n";
 	if(itsCL.itsTimeReport) itsTimer.start("Time to Read and Parse File");
 	readFile();
-	if(!itsCL.itsTimeReport) std::cout << ".";
+	if(!itsCL.itsTimeReport) Rcpp::Rcout << ".";
 	parseString();
-	if(!itsCL.itsTimeReport) std::cout << ".";
+	if(!itsCL.itsTimeReport) Rcpp::Rcout << ".";
 	if(itsCL.itsTimeReport) itsTimer.stop();
 
 	if (itsCL.itsCLI) {
 		generateSlicingGrid();
 		int layers = cliOut();
-		cout << "\n" << layers << " layers have been successfully written\n";
+		Rcpp::Rcout << "\n" << layers << " layers have been successfully written\n";
 		return - layers;
 	}
 	else

@@ -33,6 +33,7 @@
 
 ==============================================================================*/
 
+#include "Rcpp.h"
 
 #include "hfpolymesh.h"
 using namespace std;
@@ -42,9 +43,9 @@ void HFPolyMesh::FillVertices(){
 	int i,j,k;
 	double pos[3]={0.0, 0.0, 0.0};
 
-	cout << "Search: ";
-	if(itsSearch) cout << "TRUE\n";
-	else cout << "FALSE\n";
+	Rcpp::Rcout << "Search: ";
+	if(itsSearch) Rcpp::Rcout << "TRUE\n";
+	else Rcpp::Rcout << "FALSE\n";
 
 	//*** Cycle Through Cells Calculating 3 Edge Vertices ***
 	for(i=0, pos[0]=itsBBMin[0]; i<itsGridSize[0]; i++, pos[0]+=itsDelta[0]){					

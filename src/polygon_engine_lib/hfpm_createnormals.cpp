@@ -34,6 +34,7 @@ if not, see -  http://CGPL.org to get a copy of the License.
 
 ==============================================================================*/
 
+#include "Rcpp.h"
 
 #include "hfpolymesh.h"
 using namespace std;
@@ -109,7 +110,7 @@ void HFPolyMesh::CalcVNormal(int i,vector<double> *norm)
 	(*norm)[2]=-((itsInterpreter.calc(itsSendingX,itsSAttributesM)-val)/itsNormDelt[2]);
 	//Normalize
 	double length=sqrt((*norm)[0]*(*norm)[0] + (*norm)[1]*(*norm)[1] + (*norm)[2]*(*norm)[2]);
-	if(length==0.0) cout << "Normal Length of Zero Error!\n";
+	if(length==0.0) Rcpp::Rcout << "Normal Length of Zero Error!\n";
 	else{
 		(*norm)[0]/=length;
 		(*norm)[1]/=length;
@@ -137,7 +138,7 @@ void HFPolyMesh::CalcVNormal(double x, double y, double z, double& nx, double& n
 	nz=-((itsInterpreter.calc(itsSendingX,itsSAttributesM)-val)/itsNormDelt[2]);
 	//Normalize
 	double length=sqrt(nx*nx + ny*ny + nz*nz);
-	if(length==0.0) cout << "Normal Length of Zero Error!\n";
+	if(length==0.0) Rcpp::Rcout << "Normal Length of Zero Error!\n";
 	else{
 		nx/=length;
 		ny/=length;

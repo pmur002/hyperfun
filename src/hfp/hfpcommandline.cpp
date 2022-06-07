@@ -23,7 +23,7 @@
 
 ==============================================================================*/
 
-
+#include "Rcpp.h"
 
 // HFPCommandLine.cpp: implementation of the HFPCommandLine class.
 //
@@ -176,8 +176,8 @@ void HFPCommandLine::parse(){
 	  itsXYZMapping[2]=DEF_ZMAPPING;
 	  itsXConstants.clear();
 	  itsXConstants.resize(DEF_XCONSTANT_SIZE, DEF_XCONSTANT);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-x>.\n";
-	  cout << "Using default value.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-x>.\n";
+	  Rcpp::Rcout << "Using default value.\n";
 	}
 	itsCurrentArg++;
       }
@@ -213,8 +213,8 @@ void HFPCommandLine::parse(){
 			default:
 			  itsGridSize.clear();
 			  itsGridSize.resize(DEF_GRIDSIZE_SIZE, DEF_GRIDSIZE);
-			  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-g>.\n";
-			  cout << "Using default values.\n";
+			  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-g>.\n";
+			  Rcpp::Rcout << "Using default values.\n";
 			  break;
 		}
 		itsCurrentArg++;
@@ -243,8 +243,8 @@ void HFPCommandLine::parse(){
 			default:
 				itsSlicingGridStep.clear();
 				itsSlicingGridStep.resize(DEF_SGSTEP_SIZE, DEF_SGSTEP);
-				cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-gs>.\n";
-				cout << "Using default values.\n";
+				Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-gs>.\n";
+				Rcpp::Rcout << "Using default values.\n";
 				break;
 			}
 			itsCurrentArg++;
@@ -291,8 +291,8 @@ void HFPCommandLine::parse(){
 	  itsBBMinMax.push_back(DEF_BBMAX);
 	  itsBBMinMax.push_back(DEF_BBMAX);
 	  itsBBMinMax.push_back(DEF_BBMAX);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-b>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-b>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	  break;
 	}
 	if(!checkBB()){
@@ -303,8 +303,8 @@ void HFPCommandLine::parse(){
 	  itsBBMinMax.push_back(DEF_BBMAX);
 	  itsBBMinMax.push_back(DEF_BBMAX);
 	  itsBBMinMax.push_back(DEF_BBMAX);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-b>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-b>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	}					
 	itsCurrentArg++;
       }
@@ -336,8 +336,8 @@ void HFPCommandLine::parse(){
 	  itsLineColor.push_back(DEF_LINECOLORR);
 	  itsLineColor.push_back(DEF_LINECOLORG);
 	  itsLineColor.push_back(DEF_LINECOLORB);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-cl>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-cl>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	  break;
 	}
 	itsCurrentArg++;
@@ -368,8 +368,8 @@ void HFPCommandLine::parse(){
 	  itsFaceColor.push_back(DEF_FACECOLORR);
 	  itsFaceColor.push_back(DEF_FACECOLORG);
 	  itsFaceColor.push_back(DEF_FACECOLORB);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-cf>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-cf>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	  break;
 	}
 	itsCurrentArg++;
@@ -386,7 +386,7 @@ void HFPCommandLine::parse(){
       
       /* Help */
     case Help:
-      cout << helpOut();				
+      Rcpp::Rcout << helpOut();				
       break;
       
       /* WindowSize */
@@ -408,8 +408,8 @@ void HFPCommandLine::parse(){
 	  itsWindowSize.clear();
 	  itsWindowSize.push_back(DEF_WINDOWSIZEX);
 	  itsWindowSize.push_back(DEF_WINDOWSIZEY);
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-w>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-w>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	  break;
 	}
 	itsCurrentArg++;
@@ -545,15 +545,15 @@ void HFPCommandLine::parse(){
 				itsWireAndSurface = false;
 			break;
 			default:
-			cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-d>.\n";
-			cout << "Using default values.\n";						
+			Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-d>.\n";
+			Rcpp::Rcout << "Using default values.\n";						
 			break;
 	  }
 	  break;
 	default:
 	  itsDisplayMode = DEF_DISPLAY_MODE;
-	  cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-d>.\n";
-	  cout << "Using default values.\n";
+	  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-d>.\n";
+	  Rcpp::Rcout << "Using default values.\n";
 	  break;
 	}
 	itsCurrentArg++;
@@ -574,8 +574,8 @@ void HFPCommandLine::parse(){
 		if (tmpIV4.size() != 1)
 		{
 			itsUseDC = DEF_USEDC;
-			cout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-usedc>.\n";
-			cout << "Using default values.\n";
+			Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument for <-usedc>.\n";
+			Rcpp::Rcout << "Using default values.\n";
 		}
 		if (tmpIV4[0] == 0)
 			itsUseDC = false;
@@ -604,7 +604,7 @@ HFPCommandLine::ARG HFPCommandLine::getArg(string s){
   for(vector<string>::iterator it=itsValidArgArray.begin(); it!=itsValidArgArray.end(); it++, i++){
     if(s==*it) return static_cast<HFPCommandLine::ARG>(i);
   }
-  cout << "\"" << *itsCurrentArg << "\" is not a valid argument.\nIgnoring\n";
+  Rcpp::Rcout << "\"" << *itsCurrentArg << "\" is not a valid argument.\nIgnoring\n";
   return ERR;
 }
 
@@ -650,13 +650,13 @@ string HFPCommandLine::helpOut(){
 
 int HFPCommandLine::clampI (int value, int min, int max, string sarg){
   if (value<min){
-    cout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
-    cout << "Clamping to " << min << ".\n";
+    Rcpp::Rcout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
+    Rcpp::Rcout << "Clamping to " << min << ".\n";
     return min;
   }
   else if (value>max){
-    cout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
-    cout << "Clamping to " << max << ".\n";
+    Rcpp::Rcout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
+    Rcpp::Rcout << "Clamping to " << max << ".\n";
     return max;
   }
   else
@@ -666,13 +666,13 @@ int HFPCommandLine::clampI (int value, int min, int max, string sarg){
 
 double HFPCommandLine::clampD (double value, double min, double max, string sarg){
   if (value<min){
-    cout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
-    cout << "Clamping to " << min << ".\n";
+    Rcpp::Rcout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
+    Rcpp::Rcout << "Clamping to " << min << ".\n";
     return min;
   }
   else if (value>max){
-    cout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
-    cout << "Clamping to " << max << ".\n";
+    Rcpp::Rcout << "The value " << value << " in the <" << sarg << "> argument is not within the specified range.\n";
+    Rcpp::Rcout << "Clamping to " << max << ".\n";
     return max;
   }
   else
@@ -685,7 +685,7 @@ int HFPCommandLine::fillI(string s){
   //Warn of Possible Bad Conversion
   if(ret==0){
     if(s!="0"){
-      cout << "\"" << s << "\" is not a proper integer value.\nUsing the value 0 instead.\n";
+      Rcpp::Rcout << "\"" << s << "\" is not a proper integer value.\nUsing the value 0 instead.\n";
     }
   }
   return ret;
@@ -697,7 +697,7 @@ double HFPCommandLine::fillD(string s){
   //Warn of Possible Bad Conversion
   if(ret==0){
     if((s!="0") && (s!="0.0")){
-      cout << "\"" << s << "\" is not a proper floating point value.\nUsing the value 0.0 instead.\n";
+      Rcpp::Rcout << "\"" << s << "\" is not a proper floating point value.\nUsing the value 0.0 instead.\n";
     }
   }
   return ret;
@@ -789,8 +789,8 @@ bool HFPCommandLine::checkBB(){
 
 bool HFPCommandLine::hasArg(string key){
   if((itsCurrentArg == itsArgs.end()) || (validArg(*itsCurrentArg))){
-    cout << key << " requires an argument.\n";
-    cout << "Using default value.\n";
+    Rcpp::Rcout << key << " requires an argument.\n";
+    Rcpp::Rcout << "Using default value.\n";
     return false;
   }
   else{

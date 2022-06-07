@@ -33,13 +33,14 @@
 
 ==============================================================================*/
 
+#include "Rcpp.h"
 
 #include "hfpolymesh.h"
 
 void HFPolyMesh::FillMatrix(){
 	int VRCTMP=0;
 	//*** Fill itsValGrid with function values ***
-	std::cout << "Filling Function Grid \n";
+	Rcpp::Rcout << "Filling Function Grid \n";
 	double Per=0.0;
 	double Add=(double)(100.0/(double)itsGridSize[0]);
 	int PerOut=0;
@@ -48,7 +49,7 @@ void HFPolyMesh::FillMatrix(){
 	for(int i=0;i<=itsGridSize[0];i++){
 
 		PerOut=(int)Per;
-		std::cout << "\b\b\b\b\b\b\b" << PerOut << "%   ";
+		Rcpp::Rcout << "\b\b\b\b\b\b\b" << PerOut << "%   ";
 		Per+=Add;
 
 		itsSendingX[itsYMap]=itsBBMin[1];
@@ -76,8 +77,8 @@ void HFPolyMesh::FillMatrix(){
 		itsSendingX[itsXMap]+=itsDelta[0];
 		}
 
-	std::cout << "\b\b\b\b\b\b\b" << 100 << "%   ";
-	std::cout << "\n\n";
-	std::cout << "RARE CASE: " << VRCTMP << "\n\n";
+	Rcpp::Rcout << "\b\b\b\b\b\b\b" << 100 << "%   ";
+	Rcpp::Rcout << "\n\n";
+	Rcpp::Rcout << "RARE CASE: " << VRCTMP << "\n\n";
 	}
 

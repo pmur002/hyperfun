@@ -60,13 +60,13 @@ int CMainApp::cliOut() {
 	toFile << "$$HEADEREND\n\n";
 	toFile << "$$GEOMETRYSTART\n";
 
-	cout << "\n"; 
+	Rcpp::Rcout << "\n"; 
 
 	auto t1 = std::chrono::high_resolution_clock::now();
-	cout << "Z range: " << "[" << zmin << "; " << zmax << "]\n";
+	Rcpp::Rcout << "Z range: " << "[" << zmin << "; " << zmax << "]\n";
 	for (double z = zmin; z < zmax; z += zdelta) {
-		cout << "\r                                                     ";
-		cout << "\rCurrent layer z = "<< z;
+		Rcpp::Rcout << "\r                                                     ";
+		Rcpp::Rcout << "\rCurrent layer z = "<< z;
 		layers += itsSliser_->WriteCLILayer(toFile, z);
 	}
 	//vector<double> x(3, 0.0);
