@@ -1,4 +1,6 @@
 
+#include "Rcpp.h"
+
 #include "stdio.h"
 
 #include "hf_error.h"
