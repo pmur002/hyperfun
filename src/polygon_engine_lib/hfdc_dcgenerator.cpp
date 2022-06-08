@@ -115,7 +115,7 @@ void DcGenerator::sampleValue()
 	double iZ = (maxZ - minZ)/(gZ-1);
 	value = (double ***)new double*[gZ];
 	for(i=0; i<gZ; i++){
-		Rcpp::Rcout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ;
+		Rcpp::Rcout << i << "/" << gZ <<endl;
 		double z = minZ + i*iZ;
 		value[i] = new double*[gY];
 		for(int j=0; j<gY; j++){
@@ -127,7 +127,7 @@ void DcGenerator::sampleValue()
 			}
 		}
 	}
-	Rcpp::Rcout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" << i << "/" << gZ << endl;
+	Rcpp::Rcout << i << "/" << gZ << endl;
 }
 
 void DcGenerator::generateQuadMesh()
