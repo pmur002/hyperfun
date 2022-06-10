@@ -238,6 +238,7 @@ int R_hfSpaceMapCubic(double* f_a,
             int code_index);
 
 
+double hfR(double* f_a, String_Array_T* str_param);
 
 /*********************************************/
 //DEGUGGING

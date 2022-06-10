@@ -1,4 +1,6 @@
 
+export(hfR)
+
 export(hyperfun)
 importFrom(Rcpp, sourceCpp)
 useDynLib(hyperfun, .registration = TRUE)
