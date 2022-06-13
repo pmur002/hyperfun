@@ -24,18 +24,22 @@
 /* 
  * Call R to calculate value from an R function
 
-  Call: hfR(x);
+  Call: hfR(x, index);
 
   Parameters:
   x - point coordinates array
+  index - index into list of R functions
 
   C-parameters:
-        f_a[0]   corresponds to array x 
+        f_a[0]   corresponds to index
+        f_a[1]   corresponds to array x 
 
 */
 
 #include <R.h>
 #include <Rinternals.h>
+
+#include "hyperfun.h"
 
 #include "general.h"
 #include <stdlib.h>
@@ -50,11 +54,13 @@ extern double EPS;
 double hfR(double* f_a, String_Array_T* str_param)
 {
     double* x;
-    int array_index, dim;
-    SEXP xyz, ans;
+    int funIndex, array_index, dim;
+    SEXP xyz, index, ans;
     double f;
 
-    array_index = (int)f_a[0];
+    funIndex = f_a[0];
+
+    array_index = (int)f_a[1];
     HF_Get_Runtime_Array(array_index, &x, &dim);
 
     if (dim != 3) return -1111111111111.0;
@@ -64,16 +70,19 @@ double hfR(double* f_a, String_Array_T* str_param)
     REAL(xyz)[1] = x[1];
     REAL(xyz)[2] = x[2];
     
-    SEXP hfR = PROTECT(findFun(install("hfR"), R_GlobalEnv));
-    SEXP R_fcall = PROTECT(lang2(hfR, xyz));
-    ans = PROTECT(eval(R_fcall, R_GlobalEnv));
+    index = PROTECT(allocVector(INTSXP, 1));
+    INTEGER(index)[0] = (int)funIndex;
+
+    SEXP hfR = PROTECT(findFun(install("hfRcall"), hyperfunEvalEnv));
+    SEXP R_fcall = PROTECT(lang3(hfR, xyz, index));
+    ans = PROTECT(eval(R_fcall, hyperfunEvalEnv));
     
     if (!isReal(ans))
         error("Invalid return value");
 
     f = REAL(ans)[0];
 
-    UNPROTECT(4);
+    UNPROTECT(5);
     
     return f;
 }

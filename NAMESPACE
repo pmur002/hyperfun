@@ -1,6 +1,33 @@
 
-export(hfR)
-
-export(hyperfun)
 importFrom(Rcpp, sourceCpp)
 useDynLib(hyperfun, .registration = TRUE)
+
+################################################################################
+## Exports
+
+## To be replaced by hfp()
+export(hyperfun)
+
+## FRep
+export(hfSphere)
+## hfR
+export(hfR)
+## Models
+export(hfModel)
+
+################################################################################
+## S3methods
+
+## as.character()
+## FRep
+S3method("as.character", "HyperFunSphere")
+## hfR
+S3method("as.character", "HyperFunR")
+## Models
+S3method("as.character", "HyperFunModel")
+
+## Ops
+S3method("Ops", "HyperFunObject")
+
+## print()
+S3method("print", "HyperFun")

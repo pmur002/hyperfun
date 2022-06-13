@@ -261,7 +261,7 @@ function_info_T functions_info[] =
 /* 69 */  {"hfspacemapcubic", 4, { HF_A, HF_A, HF_A, HF_A, 0,    0,    0,    0, 0, 0 }, hfSpaceMapCubic,     NULL, 0          },
 /* 70 */  {"hfspacemapexp", 4, { HF_A, HF_A, HF_A, HF_A, 0,    0,    0,    0, 0, 0 }, hfSpaceMapExp,     NULL, 0          },
 /* 71 */  //{"hfvoxel", 2, { HF_A, HF_R, 0, 0, 0,    0,    0,    0, 0, 0 }, hfVoxel,     NULL, 0          },
-/* 72 */  {"hfR",            1, { HF_A,  0,    0,    0,    0,    0,    0,    0, 0, 0 }, hfR,           NULL, 0          },
+/* 72 */  {"hfR",            2, { HF_A,  HF_R,    0,    0,    0,    0,    0,    0, 0, 0 }, hfR,           NULL, 0          },
   
 /* // Examples:
  *  {"test", 3, {HF_R,HF_A,HF_S,0,0,0,0,0,0,0}, TEST,  R_TEST, 0 },

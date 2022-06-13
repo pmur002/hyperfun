@@ -20,9 +20,21 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// hfRinit
+SEXP hfRinit(SEXP evalEnv);
+RcppExport SEXP _hyperfun_hfRinit(SEXP evalEnvSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type evalEnv(evalEnvSEXP);
+    rcpp_result_gen = Rcpp::wrap(hfRinit(evalEnv));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_hyperfun_hyperfun", (DL_FUNC) &_hyperfun_hyperfun, 1},
+    {"_hyperfun_hfRinit", (DL_FUNC) &_hyperfun_hfRinit, 1},
     {NULL, NULL, 0}
 };
 

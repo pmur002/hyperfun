@@ -1,5 +1,7 @@
 #include "Rcpp.h"
 
+#include "hyperfun.h"
+
 #include "main.h"
 
 CMainApp *edi;
@@ -48,5 +50,11 @@ void hyperfun(Rcpp::StringVector args)
     }
     
     freeRessources();
+}
+
+// [[Rcpp::export]]
+SEXP hfRinit(SEXP evalEnv) {
+    hyperfunEvalEnv = evalEnv;
+    return R_NilValue;
 }
 

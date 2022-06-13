@@ -42,16 +42,16 @@ hfSphere <- function(cx = 0, cy = 0, cz = 0, r = 1, name = NULL) {
 
 as.character.HyperFunSphere <- function(x, ...) {
     paste0(x$name,
-          "(x[3], a[1])\n",
-          "{\n",
-          "  array center[3];\n",
-          "  center = [",
-          x$params[,"x"], ", ", 
-          x$params[,"y"], ", ", 
-          x$params[,"z"], "];\n",
-          "  sphere = hfSphere(x, center, ", x$params[,"r"], ");\n",
-          "  ", x$name, " = sphere;\n",
-          "}\n")
+           "(x[3], a[1])\n",
+           "{\n",
+           "  array center[3];\n",
+           "  center = [",
+           x$params[,"x"], ", ", 
+           x$params[,"y"], ", ", 
+           x$params[,"z"], "];\n",
+           "  sphere = hfSphere(x, center, ", x$params[,"r"], ");\n",
+           "  ", x$name, " = sphere;\n",
+           "}\n")
 }
 
 ################################################################################

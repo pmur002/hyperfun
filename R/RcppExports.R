@@ -5,3 +5,7 @@ hyperfun <- function(args) {
     invisible(.Call(`_hyperfun_hyperfun`, args))
 }
 
+hfRinit <- function(evalEnv) {
+    .Call(`_hyperfun_hfRinit`, evalEnv)
+}
+

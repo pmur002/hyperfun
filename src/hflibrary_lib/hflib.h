@@ -34,6 +34,10 @@
 --
 -- Last revised at: 4.8.98
 */
+
+#include <R.h>
+#include <Rinternals.h>
+
 #include "general.h"
 #ifndef HFLIB
 #define HFLIB
@@ -238,6 +242,7 @@ int R_hfSpaceMapCubic(double* f_a,
             int code_index);
 
 
+SEXP hfRinit(SEXP evalEnv);
 double hfR(double* f_a, String_Array_T* str_param);
 
 /*********************************************/
