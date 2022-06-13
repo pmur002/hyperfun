@@ -20,6 +20,8 @@ hfRmethods <- (function() {
     ## (at least) and returns at least one numeric value.
     ## Additional arguments ignored and additional returned values ignored.
     checkFun <- function(f) {
+        if (!is.function(f))
+            stop("First argument to hfR() must be a function")
         value <- f(rep(0, 3))
         if (!(is.numeric(value) && length(value) >= 1)) {
             stop("Invalid hfR() function")
