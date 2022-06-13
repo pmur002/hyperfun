@@ -5,8 +5,7 @@ useDynLib(hyperfun, .registration = TRUE)
 ################################################################################
 ## Exports
 
-## To be replaced by hfp()
-export(hyperfun)
+export(hfp)
 
 ## FRep
 export(hfSphere)
@@ -18,6 +17,14 @@ export(hfModel)
 ################################################################################
 ## S3methods
 
+## length()
+## FRep
+S3method("length", "HyperFunSphere")
+## hfR
+S3method("length", "HyperFunR")
+## Models
+S3method("length", "HyperFunModel")
+
 ## as.character()
 ## FRep
 S3method("as.character", "HyperFunSphere")
@@ -27,7 +34,7 @@ S3method("as.character", "HyperFunR")
 S3method("as.character", "HyperFunModel")
 
 ## Ops
-S3method("Ops", "HyperFunObject")
+S3method("Ops", "HyperFun")
 
 ## print()
 S3method("print", "HyperFun")

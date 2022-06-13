@@ -58,3 +58,7 @@ as.character.HyperFunR <- function(x, ...) {
            "  ", x$name, " = object;\n",
            "}\n")    
 }
+
+length.HyperFunR <- function(x, ...) {
+    1
+}

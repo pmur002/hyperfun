@@ -7,7 +7,7 @@ library(hyperfun)
 ## model VRML output
 
 ################################################################################
-## Primitives
+## FRep library
 
 ## Defaults
 hfSphere()
@@ -15,20 +15,3 @@ hfSphere()
 ## Vectorisation
 hfSphere(1:2)
 
-################################################################################
-## Models
-
-## Single object
-hfModel(hfSphere())
-
-## Multiple objects
-hfModel(hfSphere(), hfSphere())
-
-## Vectorised single object
-hfModel(hfSphere(1:2))
-
-## Combination of single and vectorised objects
-hfModel(hfSphere(), hfSphere(1:2))
-
-## Combination of objects and models
-hfModel(hfSphere(), hfModel(hfSphere(1:2)))
