@@ -1,5 +1,6 @@
 
 library(hyperfun)
+library(tools)
 
 ################################################################################
 ## HyperFun models
@@ -41,6 +42,8 @@ hfSphere(1) - hfSphere(2)
 ## ! (not => ~)
 !hfSphere()
 hfSphere(1) - !hfSphere(2)
+## Can only use ! with single object or single model
+assertError(!hfSphere(1:2))
 
 ## * (cartesian product => @)
 hfSphere(1) * hfSphere(2)
