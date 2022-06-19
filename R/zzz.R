@@ -4,7 +4,7 @@
 
 .onLoad <- function(libname, pkgname)
 {
-    environment(.hyperfunEvalEnv) <- asNamespace("hyperfun")
+    environment(.hyperfunEvalEnv) <- asNamespace("hyperfun.combined")
     hfRinit(.hyperfunEvalEnv)
 }
 

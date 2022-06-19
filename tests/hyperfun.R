@@ -1,5 +1,5 @@
 
-library(hyperfun)
+library(hyperfun.combined)
 library(tools)
 
 ################################################################################

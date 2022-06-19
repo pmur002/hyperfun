@@ -1,4 +1,4 @@
-Package: hyperfun
+Package: hyperfun.combined
 Type: Package
 Version: 0.1-0
 Title: Constructive Geometry in 3D
@@ -44,7 +44,7 @@ Authors@R: c(
            role = c("aut", "cph"),
            comment = "Author of HyperFun")
   )
-URL: https://github.com/pmur002/hyperfun, https://hyperfun.org/
+URL: https://github.com/pmur002/hyperfun.combined, https://hyperfun.org/
 License: file LICENCE
 Imports: Rcpp (>= 0.11.5)
 LinkingTo: Rcpp

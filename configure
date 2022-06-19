@@ -581,7 +581,7 @@ PACKAGE_STRING=
 PACKAGE_BUGREPORT=
 PACKAGE_URL=
 
-ac_unique_file="hyperfun"
+ac_unique_file="hyperfun.combined"
 ac_unique_file="src"
 ac_subst_vars='LTLIBOBJS
 LIBOBJS

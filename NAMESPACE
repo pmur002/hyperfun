@@ -1,6 +1,6 @@
 
 importFrom(Rcpp, sourceCpp)
-useDynLib(hyperfun, .registration = TRUE)
+useDynLib(hyperfun.combined, .registration = TRUE)
 
 ################################################################################
 ## Exports

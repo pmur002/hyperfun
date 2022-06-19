@@ -21,7 +21,7 @@
 AC_PREREQ([2.69])
 
 # Provide information about package and version numbering
-AC_INIT(hyperfun, m4_esyscmd_s([awk -e '/^Version:/ {print $2}' DESCRIPTION]))
+AC_INIT(hyperfun.combined, m4_esyscmd_s([awk -e '/^Version:/ {print $2}' DESCRIPTION]))
 
 # Verify the correct src directory exists from where the file is being run.
 AC_CONFIG_SRCDIR([src])
