@@ -12,7 +12,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // hyperfun
 void hyperfun(Rcpp::StringVector args);
-RcppExport SEXP _hyperfun_combined_hyperfun(SEXP argsSEXP) {
+RcppExport SEXP _hyperfun_hyperfun(SEXP argsSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Rcpp::StringVector >::type args(argsSEXP);
@@ -22,7 +22,7 @@ END_RCPP
 }
 // hfRinit
 SEXP hfRinit(SEXP evalEnv);
-RcppExport SEXP _hyperfun_combined_hfRinit(SEXP evalEnvSEXP) {
+RcppExport SEXP _hyperfun_hfRinit(SEXP evalEnvSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -33,12 +33,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_hyperfun_combined_hyperfun", (DL_FUNC) &_hyperfun_combined_hyperfun, 1},
-    {"_hyperfun_combined_hfRinit", (DL_FUNC) &_hyperfun_combined_hfRinit, 1},
+    {"_hyperfun_hyperfun", (DL_FUNC) &_hyperfun_hyperfun, 1},
+    {"_hyperfun_hfRinit", (DL_FUNC) &_hyperfun_hfRinit, 1},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_hyperfun_combined(DllInfo *dll) {
+RcppExport void R_init_hyperfun(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

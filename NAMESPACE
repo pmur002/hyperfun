@@ -1,6 +1,6 @@
 
 importFrom(Rcpp, sourceCpp)
-useDynLib(hyperfun.combined, .registration = TRUE)
+useDynLib(hyperfun, .registration = TRUE)
 
 ################################################################################
 ## Exports
@@ -8,7 +8,8 @@ useDynLib(hyperfun.combined, .registration = TRUE)
 export(hfp)
 
 ## FRep
-export(hfSphere)
+export(hfSphere,
+       hfBlock)
 ## hfR
 export(hfR)
 ## Models
@@ -17,9 +18,15 @@ export(hfModel)
 ################################################################################
 ## S3methods
 
+## hfp()
+S3method("hfp", "HyperFunObject")
+S3method("hfp", "HyperFunModel")
+S3method("hfp", "character")
+
 ## length()
 ## FRep
 S3method("length", "HyperFunSphere")
+S3method("length", "HyperFunBlock")
 ## hfR
 S3method("length", "HyperFunR")
 ## Models
@@ -28,6 +35,7 @@ S3method("length", "HyperFunModel")
 ## as.character()
 ## FRep
 S3method("as.character", "HyperFunSphere")
+S3method("as.character", "HyperFunBlock")
 ## hfR
 S3method("as.character", "HyperFunR")
 ## Models
@@ -38,3 +46,7 @@ S3method("Ops", "HyperFun")
 
 ## print()
 S3method("print", "HyperFun")
+
+## plot()
+S3method("plot", "HyperFunObject")
+S3method("plot", "HyperFunModel")

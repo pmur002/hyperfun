@@ -7,12 +7,74 @@ hfp.HyperFunObject <- function(x, ...) {
     hfp(hfModel(x), ...)
 }
 
-hfp.HyperFunModel <- function(x, format = "stlb", ...) {
+fixDensity <- function(density) {
+    density <- as.numeric(density)
+    n <- length(density)
+    if (n < 1 || n == 2 || n > 3)
+        stop("Invalid density")
+    rep(density, length.out=3)
+}
+
+fixBBox <- function(bbox) {
+    bbox <- as.numeric(bbox)
+    n <- length(bbox)
+    if (n < 1 || (n > 3 && n < 6) || n > 6) {
+        stop("Invalid bounding box")
+    }
+    if (n == 1) {
+            rep(c(-bbox, bbox), each=3)
+    } else if (n == 2) {
+        rep(bbox, each=3)
+    } else if (n == 3) {
+        as.numeric(cbind(-bbox, bbox))
+    } else {
+        bbox
+    }
+}
+
+hfp.HyperFunModel <- function(x, format = "rgl",
+                              bbox = 10, density = 30,
+                              port = 54321, ...) {
+    hfp(as.character(x),
+        format=format, bbox=bbox, density=density, port=port,
+        ...)
+}
+
+## Single character values is taken to be the name of a .hf file
+## Multiple character values are taken to be lines of HyperFun code
+hfp.character <- function(x, format = "rgl",
+                          bbox = 10, density = 30,
+                          port = 54321, ...) {
+    if (length(x) == 1) {
+        hfcode <- readLines(x)
+        if (length(hfcode) < 2)
+            stop("File does not appear to contain HyperFun code")
+        return(hfp(hfcode))
+    } 
+    ## Assemble arguments for 'hyperfun'
+    if (format == "rgl") {
+        plot <- TRUE
+        format <- "stlb"
+    } else {
+        plot <- FALSE
+    }
+    density <- fixDensity(density)
+    bbox <- fixBBox(bbox)
     hfFile <- tempfile(fileext = ".hf")
     outFile <- gsub("hf$", format, hfFile)
-    writeLines(as.character(x), hfFile)
-    hyperfun(c(hfFile, paste0("-", format), outFile))
-    outFile
+    params <- c(paste0("-", format), outFile,
+                "-b", paste0(bbox, collapse=","),
+                "-g", paste0(density, collapse=","))
+    ## Write .hf file
+    writeLines(x, hfFile)
+    ## Call 'hfp' 
+    hyperfun(c(hfFile, params))
+    ## Render result (optionally)
+    if (plot) {
+        rgl::readSTL(outFile, ...)
+    }
+    ## Return output file
+    invisible(outFile)
 }
 
 ################################################################################
@@ -35,6 +97,18 @@ hfModel <- function(..., op = "|", name = NULL) {
         stop("Logical not is only valid on single object or model")
     if (!(op %in% c("|", "&", "-", "!", "*"))) {
         stop(paste0("Operator ", op, " not supported"))
+    }
+    ## IF making a model based on more than 1 object (i.e., combining objects)
+    ## THEN "reduce" any object that represents more than one shape to
+    ## a single model (using "|" for 'op')
+    if (length(objects) > 1) {
+        objects <- lapply(objects,
+                          function(x) {
+                              if (length(x) > 1)
+                                  hfModel(x)
+                              else
+                                  x
+                          })
     }
     name <- hfName(name, 1)
     model <- list(objects = objects, op = op, name = name)
@@ -78,6 +152,19 @@ as.character.HyperFunModel <- function(x, ..., top=TRUE) {
 length.HyperFunModel <- function(x, ...) {
     1
 }
+
+
+################################################################################
+## Plot methods
+
+plot.HyperFunObject <- function(x, ...) {
+    plot(hfModel(x), ...)
+}
+
+plot.HyperFunModel <- function(x, ...) {
+    hfp(x, format="rgl", ...)
+}
+
 
 ################################################################################
 ## General methods

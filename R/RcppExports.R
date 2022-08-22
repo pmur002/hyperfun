@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 hyperfun <- function(args) {
-    invisible(.Call(`_hyperfun_combined_hyperfun`, args))
+    invisible(.Call(`_hyperfun_hyperfun`, args))
 }
 
 hfRinit <- function(evalEnv) {
-    .Call(`_hyperfun_combined_hfRinit`, evalEnv)
+    .Call(`_hyperfun_hfRinit`, evalEnv)
 }
 

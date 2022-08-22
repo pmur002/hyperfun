@@ -1,5 +1,5 @@
 
-library(hyperfun.combined)
+library(hyperfun)
 
 ## Output can be checked against FRep.Rout.save
 
