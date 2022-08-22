@@ -29,6 +29,25 @@
 #include "hflib.h"
 
 
+/***************/
+
+int KnotNbSom_u;
+int KnotNbSom_v;
+int KnotNbSom_w;
+
+/**************/
+
+int KnotOrder_u;
+int KnotOrder_v;
+int KnotOrder_w;
+
+/**************/
+
+double factor_u;
+double factor_v;
+double factor_w;
+
+
 /*******************************************************************************/
 
 double Knot_u(int i)

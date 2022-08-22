@@ -29,21 +29,21 @@
 
 /***************/
 
-int KnotNbSom_u;
-int KnotNbSom_v;
-int KnotNbSom_w;
+extern int KnotNbSom_u;
+extern int KnotNbSom_v;
+extern int KnotNbSom_w;
 
 /**************/
 
-int KnotOrder_u;
-int KnotOrder_v;
-int KnotOrder_w;
+extern int KnotOrder_u;
+extern int KnotOrder_v;
+extern int KnotOrder_w;
 
 /**************/
 
-double factor_u;
-double factor_v;
-double factor_w;
+extern double factor_u;
+extern double factor_v;
+extern double factor_w;
 
 /**************************************************/
 /**************************************************/

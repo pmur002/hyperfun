@@ -1,4 +1,8 @@
 
+################################################################################
+## Imports
+
+importFrom(rgl, readSTL)
 importFrom(Rcpp, sourceCpp)
 useDynLib(hyperfun, .registration = TRUE)
 

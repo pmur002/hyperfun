@@ -29,14 +29,14 @@
 #ifndef BEZIER_H
 #define BEZIER_H
 
-double Combin[21][21];
+extern double Combin[21][21];
 
 double R_int(double x, double y);
 
 double Bernstein(int i,int n, double t);
 
-int init_bezier;
-double *bu,*bv,*bw;
+extern int init_bezier;
+extern double *bu,*bv,*bw;
 void InitBezier(int l,int m,int n);
 
 #endif

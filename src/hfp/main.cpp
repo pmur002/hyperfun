@@ -59,10 +59,10 @@ int first_normal_show;
 int HF_SHOW_AXES;
 int HF_LIGHT_TYPE;
 
-GLfloat HF_FACE_COLOR[3];
-GLfloat HF_LINE_COLOR[3];
+float HF_FACE_COLOR[3];
+float HF_LINE_COLOR[3];
 
-GLfloat HF_MIN[3],HF_MAX[3]; // boundng box
+float HF_MIN[3],HF_MAX[3]; // boundng box
 
 int window_main, sub_render;
 int sub_help;

@@ -23,7 +23,7 @@
 ==============================================================================*/
 
 
-#include <malloc.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 #ifndef CUBIC_SPLINE_H

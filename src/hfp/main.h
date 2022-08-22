@@ -32,9 +32,6 @@
 #include <windows.h>
 #endif
 
-#include <GL/gl.h>
-#include <GL/glu.h>
-
 #include "mainapp.h"
 
 #ifndef MAIN_H__
@@ -52,10 +49,6 @@ extern CMainApp *edi;
 extern double itsCPos[3];
 extern double itsCLookAt[3];
 
-extern GLuint hfObject;
-extern GLuint hfNormals;
-extern GLuint hfAxes;
-
 /****************************************************************/
 
 extern int HF_FACE_LINE_FILL;           //1 : WireFrame; 0:Solid;   2:both
@@ -68,8 +61,8 @@ extern int first_normal_show;
 extern int HF_SHOW_AXES;
 
 extern int HF_LIGHT_TYPE;               //0 : ambient;  1: ambient+diffuse;  2:ambient+diffuse+specular. 
-extern GLfloat HF_FACE_COLOR[3];			// Face Color; 
-extern GLfloat HF_LINE_COLOR[3];
+extern float HF_FACE_COLOR[3];			// Face Color; 
+extern float HF_LINE_COLOR[3];
 
 extern float HF_MIN[3],HF_MAX[3];			// Bounding Box
 

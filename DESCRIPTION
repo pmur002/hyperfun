@@ -3,6 +3,7 @@ Type: Package
 Version: 0.1-0
 Title: Constructive Geometry in 3D
 Description: R interface to the HyperFun system for generating 3D models.
+Imports: rgl, Rcpp
 Authors@R: c(
     person("Paul", "Murrell", , "paul@stat.auckland.ac.nz", 
            role = c("cre", "aut"),
