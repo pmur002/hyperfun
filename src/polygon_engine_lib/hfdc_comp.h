@@ -9,6 +9,9 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
+#include <R.h>
+#include <Rinternals.h>
+
 #include <math.h>
 #include <stdio.h>
 #include <stddef.h>
@@ -500,9 +503,9 @@ private:
 static void nrerror(const char* error_text)
 /* Numerical Recipes standard error handler */
 {
-	fprintf(stderr,"Numerical Recipes run-time error...\n");
-	fprintf(stderr,"%s\n",error_text);
-	fprintf(stderr,"...now exiting to system...\n");
+	REprintf("Numerical Recipes run-time error...\n");
+	REprintf("%s\n",error_text);
+	REprintf("...now exiting to system...\n");
 	//exit(1);
 }
 

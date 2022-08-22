@@ -52,7 +52,9 @@ if not, see -  http://CGPL.org to get a copy of the License.
 #include "hfdc_dcgenerator.h"
 
 #define MAX_FILE_SIZE 100000
+#ifndef PI
 #define PI 3.14159265
+#endif
 
 class CMainApp 
 {
