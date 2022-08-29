@@ -4,6 +4,52 @@
 ################################################################################
 ## FRep library
 
+## hfBlobby
+
+hfBlobby <- function(x0 = c(-7., -6.0, -4., -2.0, 0., 7), y0 = c(-7, -4, -7, -4, -2, 1), z0 = c(-7, -6, -4, -2, 0, 4), a = c(0.7, 1, 1, 0.3, 1, 1), b = c(2, 1, 1, 1, 1, 0.5), T = 0.05, name = NULL)
+{
+  
+  numCenters <- length(x0)
+  
+  
+  params <- cbind(x0, y0, z0, a, b)
+  colnames(params) <- c("x0", "y0", "z0", "a", "b")
+  name <- hfName(name, 1)
+  blobby <- list(params = params, name = name, Threshold = T)
+  class(blobby) <- c("HyperFunBlobby", "HyperFunObject", "HyperFun")
+  blobby
+}
+
+as.character.HyperFunBlobby <- function(x, ...)
+{
+  member = c("x0", "y0", "z0", "p", "b")
+  numCenter = length(unlist(x$params[,"x0"]))
+  member = paste0(member,"[",numCenter,"]", collapse = ", ")
+  
+  x0 = paste0("x0 = [", paste(x$params[,"x0"], collapse = ", "), "];")
+  y0 = paste0("y0 = [", paste(x$params[,"y0"], collapse = ", "), "];")
+  z0 = paste0("z0 = [", paste(x$params[,"z0"], collapse = ", "), "];")
+  a = paste0("p = [", paste(x$params[,"a"], collapse = ", "), "];")
+  b = paste0("b = [", paste(x$params[,"b"], collapse = ", "), "];")
+  
+  paste0(x$name, "(x[3], a[1])", "\n",
+         "{", "\n",
+         "array ", member, ";\n",
+         x0, "\n",
+         y0, "\n",
+         z0, "\n",
+         a, "\n",
+         b, "\n",
+         "blobby = hfBlobby", "(x, x0, y0, z0, p, b, ", x$Threshold, ");\n",
+         x$name, " = blobby;", "\n",
+         "}"
+  )
+}
+
+length.HyperFunBlobby <- function(x, ...){
+  nrow(x$param)  
+}
+
 ## hfSuperell(x,center,a,b,c,s1,s2)
 
 hfSuperell <- function(cx = 0, cy = 0, cz = 0, a = 1, b = 1, c = 1, s1 = 1, s2 = 1, name = NULL)
