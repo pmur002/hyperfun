@@ -17,9 +17,9 @@ export(hfSphere,
        hfBlobby,
        hfSuperell,
        hfTorus,
-       hfElliCone,
+       hfEllCone,
        hfCone,
-       hfElliCylinder,
+       hfEllCylinder,
        hfCylinder,
        hfEllipsoid)
 ## hfR

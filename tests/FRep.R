@@ -11,7 +11,24 @@ library(hyperfun)
 
 ## Defaults
 hfSphere()
+hfBlock()
+hfEllipsoid()
+hfCylinder()
+hfEllCylinder()
+hfCone()
+hfEllCone()
+hfTorus()
+hfSuperell()
+hfBlobby()
 
 ## Vectorisation
-hfSphere(1:2)
-
+hfSphere(1:2, 1:2, 1:2)
+hfBlock(1:2, 1:2, 1:2)
+hfEllipsoid(c(0, 3))
+hfCylinder(cy=c(0, 3))
+hfEllCylinder(cy=c(0, 3))
+hfCone(cy=c(0, 5))
+hfEllCone(cy=c(0, 3))
+hfTorus(cy=c(0, 3))
+hfSuperell(c(0, 3))
+hfBlobby(1:4)
