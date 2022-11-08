@@ -13,7 +13,15 @@ export(hfp)
 
 ## FRep
 export(hfSphere,
-       hfBlock)
+       hfBlock,
+       hfBlobby,
+       hfSuperell,
+       hfTorus,
+       hfElliCone,
+       hfCone,
+       hfElliCylinder,
+       hfCylinder,
+       hfEllipsoid)
 ## hfR
 export(hfR)
 ## Models
@@ -31,6 +39,14 @@ S3method("hfp", "character")
 ## FRep
 S3method("length", "HyperFunSphere")
 S3method("length", "HyperFunBlock")
+S3method("length", "HyperFunBlobby")
+S3method("length", "HyperFunSuperellipsoid")
+S3method("length", "HyperFunTorus")
+S3method("length", "HyperFunEllipticCone")
+S3method("length", "HyperFunCone")
+S3method("length", "HyperFunEllipticCylinder")
+S3method("length", "HyperFunCylinder")
+S3method("length", "HyperFunEllipsoid")
 ## hfR
 S3method("length", "HyperFunR")
 ## Models
@@ -40,6 +56,14 @@ S3method("length", "HyperFunModel")
 ## FRep
 S3method("as.character", "HyperFunSphere")
 S3method("as.character", "HyperFunBlock")
+S3method("as.character", "HyperFunBlobby")
+S3method("as.character", "HyperFunSuperellipsoid")
+S3method("as.character", "HyperFunTorus")
+S3method("as.character", "HyperFunEllipticCone")
+S3method("as.character", "HyperFunCone")
+S3method("as.character", "HyperFunEllipticCylinder")
+S3method("as.character", "HyperFunCylinder")
+S3method("as.character", "HyperFunEllipsoid")
 ## hfR
 S3method("as.character", "HyperFunR")
 ## Models

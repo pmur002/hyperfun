@@ -8,3 +8,5 @@ src/*/*.o
 src/*/*.so
 src/*/*.dll
 src/Makevars
+output
+R/hfP.R
