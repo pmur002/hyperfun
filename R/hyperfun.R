@@ -33,18 +33,16 @@ fixBBox <- function(bbox) {
 }
 
 hfp.HyperFunModel <- function(x, format = "rgl",
-                              bbox = 10, density = 30,
-                              port = 54321, ...) {
+                              bbox = 10, density = 30, ...) {
     hfp(as.character(x),
-        format=format, bbox=bbox, density=density, port=port,
+        format=format, bbox=bbox, density=density,
         ...)
 }
 
 ## Single character values is taken to be the name of a .hf file
 ## Multiple character values are taken to be lines of HyperFun code
 hfp.character <- function(x, format = "rgl",
-                          bbox = 10, density = 30,
-                          port = 54321, ...) {
+                          bbox = 10, density = 30, ...) {
     if (length(x) == 1) {
         hfcode <- readLines(x)
         if (length(hfcode) < 2)
