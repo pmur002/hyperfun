@@ -52,7 +52,7 @@ length.HyperFunBlobby <- function(x, ...) {
 }
 
 ## hfSuperell
-hfSuperell <- function(cx = 0, cy = 0, cz = 0, a = 1, b = 2, c = 3,
+hfSuperEll <- function(cx = 0, cy = 0, cz = 0, a = 1, b = 2, c = 3,
                        s1 = 0.5, s2 = 2, name = NULL) {
     if (!(is.numeric(cx) &&
           is.numeric(cy) &&
