@@ -8,18 +8,18 @@
 hfBlobby <- function(x0 = c(1, -1), 
                      y0 = 0,
                      z0 = 0,
-                     a = 2,
-                     b = 3,
+                     a0 = 2,
+                     b0 = 3,
                      T = 0.5, name = NULL) {
     if (!(is.numeric(x0) &&
           is.numeric(y0) &&
           is.numeric(z0) &&
-          is.numeric(a)  &&
-          is.numeric(b)  &&
+          is.numeric(a0)  &&
+          is.numeric(b0)  &&
           is.numeric(T)))
         stop("All arguments must be numeric")
-    params <- cbind(x0, y0, z0, a, b)
-    colnames(params) <- c("x0", "y0", "z0", "a", "b")
+    params <- cbind(x0, y0, z0, a0, b0)
+    colnames(params) <- c("x0", "y0", "z0", "a0", "b0")
     name <- hfName(name, 1)
     blobby <- list(params = params, name = name, Threshold = T)
     class(blobby) <- c("HyperFunBlobby", "HyperFunObject", "HyperFun")
@@ -32,8 +32,8 @@ as.character.HyperFunBlobby <- function(x, ...) {
     x0 = paste0("  x0 = [", paste(x$params[,"x0"], collapse = ", "), "];")
     y0 = paste0("  y0 = [", paste(x$params[,"y0"], collapse = ", "), "];")
     z0 = paste0("  z0 = [", paste(x$params[,"z0"], collapse = ", "), "];")
-    a = paste0("  p = [", paste(x$params[,"a"], collapse = ", "), "];")
-    b = paste0("  b = [", paste(x$params[,"b"], collapse = ", "), "];")
+    a = paste0("  p = [", paste(x$params[,"a0"], collapse = ", "), "];")
+    b = paste0("  b = [", paste(x$params[,"b0"], collapse = ", "), "];")
     paste0(x$name, "(x[3], a[1])\n",
            "{", "\n",
            "  array ", arrays, ";\n",
