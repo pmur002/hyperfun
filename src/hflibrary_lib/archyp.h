@@ -24,9 +24,9 @@
 
 
 
-__inline double asinh(double z){ return log(z+sqrt(1+z*z)); };
+__inline double asinh(double z){ return log(z+sqrt(1+z*z)); }
 
-__inline double acosh(double z){ return log(z+(z+1)*sqrt((z-1)/(z+1))); };
+__inline double acosh(double z){ return log(z+(z+1)*sqrt((z-1)/(z+1))); }
 
-__inline double atanh(double z){ return log((1+z)*sqrt(1/(1-(z*z)))); };
+__inline double atanh(double z){ return log((1+z)*sqrt(1/(1-(z*z)))); }
 

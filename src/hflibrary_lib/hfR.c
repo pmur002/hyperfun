@@ -46,6 +46,8 @@
 #include <math.h>
 #include <string.h>
 
+SEXP hyperfunEvalEnv;
+
 extern int HF_Get_Runtime_Array(int index, double** array, int* size);
 void HF_Fill_Error(PN_T* p_pn, int er_index, Error_Info_T* EI, int ic);
 

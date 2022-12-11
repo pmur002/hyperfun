@@ -1,2 +1,2 @@
 
-SEXP hyperfunEvalEnv;
+extern SEXP hyperfunEvalEnv;

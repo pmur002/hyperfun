@@ -114,7 +114,7 @@ int tu,tv,tw;
 
 	}
 	fclose(file);*/
-};
+}
 
 
 void InitSpline(int u,int v,int w, double *ctr_points){

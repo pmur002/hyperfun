@@ -936,7 +936,7 @@ int HF_Calc_Expr(PN_T*         p_pn,
       HF_Fill_Error(p_pn, Function_Not_Implemented_Error, error_info, code_index);
       return 0; /* Error */
     }
-};
+}
 
 int HF_calc(/*  in*/  PN_T*         p_pn,
             /*  in*/  double*       stack,

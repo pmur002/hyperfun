@@ -1837,7 +1837,7 @@ int HF_Get_Whole_Array_Assign_Operator(char*              p_program,
     }
   HF_get_token(p_program, p_sps);
   return memory_status;
-};
+}
 
 
 
@@ -1939,7 +1939,7 @@ return memory_status;
     }
   HF_get_token(p_program, p_sps);
   return memory_status;
-};
+}
 
 
 int HF_Get_SArray_Assign_Operator(char*              p_program,
@@ -2037,7 +2037,7 @@ int HF_Get_SArray_Assign_Operator(char*              p_program,
    }
    HF_get_token(p_program, p_sps);
    return memory_status;
-};
+}
 
 int HF_Get_Whole_SArray_Assign_Operator(char*              p_program,
                                        PN_T*              p_pns,
@@ -2187,7 +2187,7 @@ int HF_Get_Whole_SArray_Assign_Operator(char*              p_program,
    }
    HF_get_token(p_program, p_sps);
    return memory_status;
-};
+}
 
 int HF_Get_Assign_Operator(char*              p_program,
                            PN_T*              p_pns,
@@ -2256,7 +2256,7 @@ return memory_status;
     }
   HF_get_token(p_program, p_sps);
   return memory_status;
-};
+}
 /***************************************************************************/
 int HF_Parse_Operators(char*              p_program,
                        PN_T*              p_pns,

@@ -265,9 +265,10 @@ int HF_get_token_internal(char*                p_str, /* program ASCIIZ string *
       *i = *i + 1;
       for(/*1*/ count=0;
 		/*2*/ (p_str[*i] != '"') &&
-		  (p_str[*i] != '\0') &&
-		  (p_str[*i] != '\n') &&
-		  (count < MAX_LENGTH_OF_STRING);
+                    (p_str[*i] != '\0') &&
+                    (p_str[*i] != '\n') &&
+                    /* "- 1" to allow for \0 terminator */
+                    (count < (MAX_LENGTH_OF_STRING - 1)); 
 		/*3*/ count++)
 	{
 	  if(p_str[*i] == '\n')

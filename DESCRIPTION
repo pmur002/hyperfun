@@ -1,8 +1,8 @@
 Package: hyperfun
 Type: Package
 Version: 0.1-0
-Title: Constructive Geometry in 3D
-Description: R interface to the HyperFun system for generating 3D models.
+Title: 3D Function Representation and Constructive Geometry
+Description: R interface to the HyperFun system for generating 3D models.  
 Authors@R: c(
     person("Paul", "Murrell", , "paul@stat.auckland.ac.nz", 
            role = c("cre", "aut"),
@@ -45,7 +45,7 @@ Authors@R: c(
            role = c("aut", "cph"),
            comment = "Author of HyperFun")
   )
-URL: https://github.com/pmur002/hyperfun, https://hyperfun.org/
+URL: https://github.com/pmur002/hyperfun
 License: file LICENCE
 Imports: Rcpp (>= 0.11.5), rgl
 LinkingTo: Rcpp
