@@ -33,8 +33,9 @@ hfp(x, \dots)
     See the Details Section.
   }
   \item{density}{
-    A numeric value specifying the resolution of the final scene.
-    A higher value will produce a smoother result.
+    A numeric vector specifying the resolution of the final scene.
+    See the Details Section.
+    Higher values will produce a smoother result.
   }
   \item{\dots}{
     Arguments passed to other methods.
@@ -60,6 +61,11 @@ hfp(x, \dots)
   \code{c(d1, d2, d1, d2, d1, d2)}.
   Three values, \code{c(d1, d2, d3)} are interpreted as
   \code{c(-d1, d1, -d2, d2, -d3, d3)}.
+
+  The \code{density} can be specified as 1 or 3 values, giving
+  the resolution of the final scene in the form
+  \code{c(xdensity, ydensity, zdensity)}.
+  A single value, \code{r}, is interpreted as \code{c(r, r, r)}.
 }
 \value{
   The name of the file to which output was written.
