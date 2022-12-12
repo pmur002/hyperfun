@@ -54,13 +54,13 @@ hfp(x, \dots)
 
   The bounding box can be specified as 1, 2, 3 or 6 values giving
   the lower and upper bounds for x-, y-, and z-dimensions in the
-  form \code{c(xmin, xmax, ymin, ymax, zmin, zmax)}.
+  form \code{c(xmin, ymin, zmin, xmax, ymax, zmax)}.
   A single value, \code{d}, is interpreted as
-  \code{c(-d, d, -d, d, -d, d)}.
+  \code{c(-d, -d, -d, d, d, d)}.
   Two values, \code{c(d1, d2)}, are interpreted as
-  \code{c(d1, d2, d1, d2, d1, d2)}.
+  \code{c(d1, d1, d1, d2, d2, d2)}.
   Three values, \code{c(d1, d2, d3)} are interpreted as
-  \code{c(-d1, d1, -d2, d2, -d3, d3)}.
+  \code{c(-d1, -d2, -d3, d1, d2, d3)}.
 
   The \code{density} can be specified as 1 or 3 values, giving
   the resolution of the final scene in the form
