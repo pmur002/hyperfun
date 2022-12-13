@@ -84,6 +84,7 @@ hfp(x, \dots)
   \link{FRep}, \code{\link{hfModel}}, \code{\link{hfR}}.
 }
 \examples{
-hfp(hfSphere())
+if (interactive())
+    hfp(hfSphere())
 }
 \keyword{ dplot }
