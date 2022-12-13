@@ -34,6 +34,7 @@
 -- Last revised at: 08/18/98
 */
 
+#include <stdlib.h>
 
 #ifndef MAX_LENGTH_OF_STRING
 #define MAX_LENGTH_OF_STRING 256

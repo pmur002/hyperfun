@@ -151,8 +151,9 @@ static void setup_pattern(int i, int b0, int b1, double r0, double r1, double *v
 
 static double Noise3(double *vec)
 {
-	int bx0, bx1, by0, by1, bz0, bz1, b00, b10, b01, b11;
-	double rx0, rx1, ry0, ry1, rz0, rz1, *q, sy, sz, a, b, c, d, t, u, v;
+	int bx0=0, bx1=0, by0=0, by1=0, bz0=0, bz1=0, b00, b10, b01, b11;
+	double rx0=0, rx1=0, ry0=0, ry1=0, rz0=0, rz1=0, 
+            *q, sy, sz, a, b, c, d, t, u, v;
 	int i, j;
 
 	

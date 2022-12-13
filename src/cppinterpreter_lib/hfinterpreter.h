@@ -40,6 +40,8 @@
 #include <vector>
 #include <cstring>
 
+#include <stdlib.h>
+
 extern "C"{
 #include "general.h"
 }

@@ -26,6 +26,8 @@ if not, see -  http://CGPL.org to get a copy of the License.
 #include <iomanip>
 #include <algorithm>
 
+#include <stdlib.h>
+
 //creating the new chain with given values of head and tail coordinates
 void createchain(chain* newchain, link* tail, link* head, int orientation, int number, double tailx, double taily, double headx, double heady) {
 	newchain->tail = tail;
