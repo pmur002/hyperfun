@@ -47,7 +47,8 @@ hfp.character <- function(x, format = "rgl",
         hfcode <- readLines(x)
         if (length(hfcode) < 2)
             stop("File does not appear to contain HyperFun code")
-        return(hfp(hfcode))
+        return(hfp(hfcode, format = format, bbox = bbox, density = density,
+                   ...))
     } 
     ## Assemble arguments for 'hyperfun'
     if (format == "rgl") {
