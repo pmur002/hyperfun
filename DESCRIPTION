@@ -1,6 +1,6 @@
 Package: hyperfun
 Type: Package
-Version: 0.1-0
+Version: 0.1-1
 Title: 3D Function Representation and Constructive Geometry
 Description: R interface to the HyperFun system for generating 3D models.  
 Authors@R: c(

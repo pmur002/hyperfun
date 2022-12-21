@@ -498,7 +498,7 @@ void DcGenerator::generateQuadMesh()
 		if(_isnan(x[1]) || _isnan(x[2]) || _isnan(x[3]))
 			continue;
 #else
-		if(__isnan(x[1]) || __isnan(x[2]) || __isnan(x[3]))
+		if(isnan(x[1]) || isnan(x[2]) || isnan(x[3]))
 			continue;
 #endif
 		quadMesh->vertex[i][0] += x[1];
